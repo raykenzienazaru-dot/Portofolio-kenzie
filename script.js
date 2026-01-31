@@ -56,7 +56,7 @@ const DATA = {
     {
       name: "Sistem IoT Gas Effectiveness Tawas",
       image: "images/Sistem IoT Gas Effectiveness Tawas.png",
-      type: "esp32",
+      type: "Esp32",
       summary: "Sistem IoT Gas Effectiveness Tawas adalah sistem berbasis Internet of Things dan AI analisis yang digunakan untuk memantau dan menganalisis efektivitas penggunaan tawas dalam mengendalikan atau menetralkan gas tertentu di suatu lingkungan secara real-time lalu menggunakan Tawas.",
       components: ["Esp32", "DHT22", "MQ135", "Servo"],
       features: ["Ambang batas", "Tampilan real-time", "Kalibrasi sederhana", "Website", "AI Analys"],
