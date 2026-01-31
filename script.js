@@ -119,12 +119,20 @@ const DATA = {
         ktiUrl: "files/SIGETA (2).pdf"
     },
     {
+      date: "2025-12",
+      title: "AIR.CEK",
+      note:
+        "Kami mengembangkan AIR.ai, sebuah website berbasis AI logic untuk menganalisis dan menentukan kelayakan kualitas air, khususnya berdasarkan nilai pH. Sistem ini membantu memantau kondisi air di sekolah dan fasilitas umum serta memberikan rekomendasi solusi jika kualitas air berada di luar standar.",
+        ktiUrl: "files/AIR.CEK.pdf"
+    },
+    {
       date: "2026-01",
       title: "SOFIA",
       note:
         "SOFIA adalah sistem berbasis IoT, website monitoring, dan AI yang memantau dan menganalisis lingkungan, keamanan, dan potensi bahaya secara real-time. Sistem ini membantu pengelolaan fasilitas kantor yang lebih efisien, aman, dan berbasis data melalui keputusan yang cepat dan akurat.",
         ktiUrl: "files/SOFIA KTI.pdf"
     }
+    
   ]
 };
 
