@@ -98,7 +98,7 @@ const DATA = {
   // RISET / PERKEMBANGAN SKILL: isi seperti jurnal belajar
   research: [
     {
-      date: "2025-06",
+      date: "2025-07",
       title: "SIGEMA",
       note:
         "SIGEMA adalah lemari pintar berbasis IoT yang memantau kelembapan secara real-time menggunakan DHT22 dan ESP32, serta memberikan peringatan melalui buzzer dan website saat silica gel jenuh untuk mencegah kerusakan dokumen dan perangkat akibat korosi dan oksidasi.",
