@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio | Raykenzie</title>
+  <meta name="description" content="Portofolio: proyek Arduino, skill, dan perkembangan riset." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <span class="dot"></span>
+        <span id="brandName">Kenzie.dev</span>
+      </a>
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+      <div class="nav-links">
+        <a href="#tentang">Tentang</a>
+        <a href="#skill">Skill</a>
+        <a href="#proyek">Proyek ESP32</a>
+        <a href="#riset">Riset & Perkembangan</a>
+        <a href="#prestasi">Prestasi</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top" class="container">
+    <!-- HERO -->
+    <header class="hero card">
+      <div class="hero-left">
+        <div class="badge"><i></i>  Arduino • Embedded • IoT</div>
+
+        <h1>
+          Halo, saya <span class="grad" id="yourName">Kenzie</span><br/>
+          <span class="muted" id="yourRole">Arduino / IoT Enthusiast</span>
+        </h1>
+
+        <p class="lead" id="heroDesc">
+          Saya membuat proyek Arduino dan eksperimen IoT, sambil mendokumentasikan perkembangan skill dan riset yang saya pelajari.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#proyek">Lihat Proyek</a>
+          <a class="btn" href="#riset">Lihat Riset</a>
+          <a class="btn" id="githubBtn" href="https://github.com/raykenzienazaru-dot" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+
+        <div class="chips" id="quickTags"></div>
+      </div>
+
+      <aside class="hero-right">
+        <div class="profile">
+          <div class="avatar" aria-hidden="true"></div>
+          <div>
+            <strong id="profileName">Raykenzie Nazaru Fathurrahmansyah</strong>
+            <small id="profileMeta">Jakarta • raykenzienazaru@gmail.com</small>
+          </div>
+        </div>
+
+        <div class="stats" id="stats"></div>
+
+        <div class="card-mini">
+          <div class="mini-title">Link</div>
+          <div class="chips" id="socialLinks"></div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="section">
+      <div class="section-title">
+        <h2>Tentang Saya</h2>
+        <p>Ringkasan singkat & tujuan.</p>
+      </div>
+      <div class="grid">
+        <div class="col-8">
+          <div class="box" id="aboutBox"></div>
+        </div>
+        <div class="col-4">
+          <div class="box" id="focusBox"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILL -->
+    <section id="skill" class="section">
+      <div class="section-title">
+        <h2>Skill</h2>
+        <p>Skill utama + yang sedang dipelajari.</p>
+      </div>
+
+      <div class="grid">
+        <div class="col-6">
+          <div class="box">
+            <div class="box-title">Skill Utama</div>
+            <div class="chips" id="skillsMain"></div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="box">
+            <div class="box-title">Sedang Dipelajari</div>
+            <div class="chips" id="skillsLearning"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYEK -->
+    <section id="proyek" class="section">
+      <div class="section-title">
+        <h2>Proyek Arduino</h2>
+        <p>Nama proyek/alat + ringkasan + komponen.</p>
+      </div>
+
+      <div class="grid" id="projectsGrid"></div>
+    </section>
+
+    <!-- RISET -->
+    <section id="riset" class="section">
+      <div class="section-title">
+        <h2>Riset & Perkembangan Skill</h2>
+        <p>Catatan belajar, eksperimen, dan insight.</p>
+      </div>
+
+      <div class="timeline" id="researchTimeline"></div>
+    </section>
+
+  <section id="prestasi" class="section">
+  <div class="section-title">
+    <h2>Prestasi</h2>
+    <p>Beberapa hal yang pernah saya ikuti dan kerjakan.</p>
+  </div>
+
+  <div class="grid">
+    <div class="col-6">
+      <div class="box">
+        <div class="box-title">Lomba & Event</div>
+
+        <div class="achievement">
+             <img class="card-img" src="images/KIP.png" alt="Sertifikat Juara 3">
+          <h4>JUARA 3 KIP JAKARTA PUSAT</h4>
+          <small>KIP • 2025</small>
+          <p>
+            Berperan sebagai <strong>Penulis</strong>. 
+            Berpartisipasi dalam penyusunan, pengumpulan data, dan dokumentasi penelitian
+efektivitas silica gel.
+          </p>
+        </div>
+
+        <div class="achievement">
+            <img class="card-img" src="images/PNJ.png">
+          <h4>JUARA 1 ITechnoCup JAKARTA PUSAT</h4>
+          <small>UNIV • 2025</small>
+          <p>
+            Bertugas di bagian <strong>Penulis KTI</strong>. 
+           Berpartisipasi dalam penyusunan, pengumpulan data, dan perkembangan website.
+          </p>
+        </div>
+         <div class="achievement">
+            <img class="card-img" src="images/SIGETA ITB WIDYA GAMA .jpg">
+          <h4>JUARA 1 ITB WIDYA GAMA</h4>
+          <small>UNIV • 2025</small>
+          <p>
+            Bertugas di bagian <strong>Pengembang IoT dan Website</strong>. 
+           Berpartisipasi dalam pengolahan alat IoT, pengumpulan data, dan perkembangan website.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="box">
+        <div class="box-title">Sertifikat & Pelatihan</div>
+
+        <div class="achievement">
+          <h4> Pelatihan Dasar IoT</h4>
+          <small>Online Course • 2025</small>
+          <p>
+            Mempelajari komunikasi MQTT, integrasi sensor, dan dashboard monitoring berbasis web.
+          </p>
+        </div>
+
+        <div class="achievement">
+          <h4>ESP32 Programming Lanjutan</h4>
+          <small>Ekskul Sekolah • 2025</small>
+          <p>
+            Fokus pada optimasi kode, penggunaan library, dan debugging proyek berbasis mikrokontroler.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <footer class="footer">
+      <div>© <span id="year"></span> <span id="footerName">Kenzie</span> — Portofolio ESP32</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
