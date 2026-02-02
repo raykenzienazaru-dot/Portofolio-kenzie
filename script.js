@@ -92,11 +92,26 @@ const DATA = {
       features: ["Minotoring"],
       demoUrl: "https://si-gema.vercel.app/#mitra",
       repoUrl: "https://si-gema.vercel.app/#mitra"
+    },
+    {
+      name: "BALAP-SA",
+      image: "images/BALAPSA.png",
+      type: "Lingkungan",
+      summary: "Kami mengembangkan BALAP-SA (Bantal Alam Alami Pemanfaatan Serabut Kelapa), sebuah produk inovatif berbasis pemanfaatan bahan alami dan prinsip keberlanjutan untuk menghasilkan bantal ramah lingkungan. Sistem pengembangan ini berfokus pada pengolahan serabut kelapa sebagai bahan utama yang melalui proses seleksi, pengeringan, dan perancangan struktur agar menghasilkan bantal yang nyaman, sehat, dan bernilai guna.",
+      components: ["Serabut Kelapa", "Kayu manis", "Sarung bantal"],
+      features: ["Bantal Alami"],
     }
   ],
 
   // RISET / PERKEMBANGAN SKILL: isi seperti jurnal belajar
   research: [
+    {
+      date: "2024-7",
+      title: "BALAP-SA",
+      note:
+        "Kami mengembangkan BALAP-SA (Bantal Alam Alami Pemanfaatan Serabut Kelapa), sebuah produk inovatif berbasis pemanfaatan bahan alami dan prinsip keberlanjutan untuk menghasilkan bantal ramah lingkungan. Sistem pengembangan ini berfokus pada pengolahan serabut kelapa sebagai bahan utama yang melalui proses seleksi, pengeringan, dan perancangan struktur agar menghasilkan bantal yang nyaman, sehat, dan bernilai guna.",
+        ktiUrl: "files/BALAP-SA.pdf"
+    },
     {
       date: "2025-07",
       title: "SIGEMA",
