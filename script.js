@@ -100,6 +100,8 @@ const DATA = {
       summary: "Kami mengembangkan BALAP-SA (Bantal Alam Alami Pemanfaatan Serabut Kelapa), sebuah produk inovatif berbasis pemanfaatan bahan alami dan prinsip keberlanjutan untuk menghasilkan bantal ramah lingkungan. Sistem pengembangan ini berfokus pada pengolahan serabut kelapa sebagai bahan utama yang melalui proses seleksi, pengeringan, dan perancangan struktur agar menghasilkan bantal yang nyaman, sehat, dan bernilai guna.",
       components: ["Serabut Kelapa", "Kayu manis", "Sarung bantal"],
       features: ["Bantal Alami"],
+      demoUrl: "files/BALAP-SA.pdf",
+      repoUrl: "files/BALAP-SA.pdf"
     }
   ],
 
