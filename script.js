@@ -84,6 +84,24 @@ const DATA = {
       repoUrl: "https://sofia-lime.vercel.app/"
     },
     {
+ name: "GWS",
+      image: "images/GWS.jpeg",
+      type: "Esp32",
+      summary: "Kami membuat GWS dan GWS adalah sistem berbasis Internet of Things (IoT), website monitoring, dan Artificial Intelligence (AI) yang memantau dan menganalisis kualitas air secara real-time. Sistem ini membantu klasifikasi kelayakan air, pelaporan masyarakat, serta mendukung pengelolaan sanitasi yang lebih efisien, akurat, dan berbasis data.",
+      components: ["Esp32", "Sensor PH air",],
+      features: ["Analisis Kandungan air", "Peringatan dini", "Monitor Jarak Jauh", "Informasi solusi jika kualitas air buruk"],
+    },
+    {
+        name: "SOFIA PEMUDA PELOPOR",
+      image: "images/SOFIA.jpeg",
+      type: "Esp32",
+      summary: "Saya membuat SOFIA ini dan SOFIA adalah sistem berbasis Internet of Things (IoT), website monitoring, dan Artificial Intelligence (AI) yang memantau dan menganalisis kondisi gudang hasil panen secara real-time dan menggunakan telegram. Sistem ini membantu menjaga kualitas hasil panen, meningkatkan keamanan, serta memberikan notifikasi otomatis untuk mendukung pengelolaan yang lebih efisien dan berbasis data.",
+      components: ["Esp32", "PIR", "DHT22", "MQ135", "FLEM", "Ultrasonic"],
+      features: ["Analisis Kebakaran", "Peringatan dini", "Monitor Jarak Jauh", "Analisis Tindakan Mencurigakan DLL"],
+      demoUrl: "https://sofia-ai.pages.dev/",
+      repoUrl: "https://sofia-ai.pages.dev/"
+    },
+    {
       name: "SIGEMA",
       image: "images/SIGEMA.png",
       type: "Esp32",
@@ -148,6 +166,20 @@ const DATA = {
       note:
         "SOFIA adalah sistem berbasis IoT, website monitoring, dan AI yang memantau dan menganalisis lingkungan, keamanan, dan potensi bahaya secara real-time. Sistem ini membantu pengelolaan fasilitas kantor yang lebih efisien, aman, dan berbasis data melalui keputusan yang cepat dan akurat.",
         ktiUrl: "files/SOFIA KTI.pdf"
+    },
+    {
+      date: "2026-03",
+      title: "SOFIA PEMUDA PELOPOR",
+      note:
+        "SOFIA adalah sistem IoT, website, dan AI untuk memantau kondisi gudang hasil panen secara real-time guna menjaga kualitas, keamanan, dan efisiensi pengelolaan.",
+        ktiUrl: "files/SOFIA PEMUDA PELOPOR.pdf"
+    },
+    {
+      date: "2026-03",
+      title: "GWS",
+      note:
+        "GWS adalah sistem berbasis Internet of Things (IoT), website monitoring, dan Artificial Intelligence (AI) yang memantau dan menganalisis kualitas air secara real-time. Sistem ini membantu klasifikasi kelayakan air, pelaporan masyarakat, serta mendukung pengelolaan sanitasi yang lebih efisien, akurat, dan berbasis data.",
+        ktiUrl: "files/GWS.pdf"
     }
     
   ]
