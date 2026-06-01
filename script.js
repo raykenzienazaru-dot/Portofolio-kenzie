@@ -450,6 +450,87 @@ function initCustomCursor(){
   animate();
 }
 
+function initPanelSwitcher(){
+  const panels = Array.from(document.querySelectorAll("[data-panel]"));
+  if (!panels.length) return;
+
+  const triggers = Array.from(document.querySelectorAll("[data-panel-target]"));
+  const panelMap = new Map(panels.map((panel) => [panel.dataset.panel, panel]));
+  const navLinks = document.getElementById("navLinks");
+  const menuToggle = document.getElementById("menuToggle");
+  const defaultPanelId = panelMap.has("home") ? "home" : panels[0].dataset.panel;
+  let currentPanelId = null;
+
+  const closeMenu = () => {
+    if (!navLinks || !menuToggle) return;
+    navLinks.classList.remove("active");
+    menuToggle.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+  };
+
+  const applyPanelState = (panelId, { pushState = false, scrollToTop = true } = {}) => {
+    const targetId = panelMap.has(panelId) ? panelId : defaultPanelId;
+    const target = panelMap.get(targetId);
+    if (!target) return;
+
+    panels.forEach((panel) => {
+      const isActive = panel === target;
+      panel.hidden = !isActive;
+      panel.setAttribute("aria-hidden", String(!isActive));
+      panel.classList.remove("is-entering");
+    });
+
+    triggers.forEach((trigger) => {
+      const isActive = trigger.dataset.panelTarget === targetId;
+      trigger.classList.toggle("is-active", isActive);
+      if (isActive) {
+        trigger.setAttribute("aria-current", "page");
+      } else {
+        trigger.removeAttribute("aria-current");
+      }
+    });
+
+    if (pushState && currentPanelId !== targetId) {
+      history.pushState({ panel: targetId }, "", `#${targetId}`);
+    } else {
+      history.replaceState({ panel: targetId }, "", `#${targetId}`);
+    }
+
+    currentPanelId = targetId;
+
+    if (scrollToTop) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    closeMenu();
+
+    window.requestAnimationFrame(() => {
+      target.classList.add("is-entering");
+      window.setTimeout(() => target.classList.remove("is-entering"), 320);
+    });
+  };
+
+  const handleTriggerClick = (event) => {
+    const trigger = event.target.closest("[data-panel-target]");
+    if (!trigger) return;
+
+    const targetPanel = trigger.dataset.panelTarget;
+    if (!targetPanel) return;
+
+    event.preventDefault();
+    applyPanelState(targetPanel, { pushState: true });
+  };
+
+  document.addEventListener("click", handleTriggerClick);
+  window.addEventListener("popstate", () => {
+    const hash = window.location.hash.replace(/^#/, "");
+    applyPanelState(hash || defaultPanelId, { pushState: false, scrollToTop: false });
+  });
+
+  const initialHash = window.location.hash.replace(/^#/, "");
+  applyPanelState(initialHash || defaultPanelId, { pushState: false, scrollToTop: false });
+}
+
 initLoader();
 initCustomCursor();
 
@@ -501,7 +582,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
 
-if (toggle && navLinks) {
+  if (toggle && navLinks) {
   const closeMenu = () => {
     navLinks.classList.remove("active");
     toggle.classList.remove("active");
@@ -542,5 +623,7 @@ if (toggle && navLinks) {
     }
   });
 }
+
+  initPanelSwitcher();
 
 });

@@ -134,6 +134,10 @@ body.is-loading .custom-cursor{
   opacity:0 !important;
 }
 
+.content-panel[hidden]{
+  display:none !important;
+}
+
 .custom-cursor.is-hovering{
   filter:drop-shadow(0 0 18px rgba(124,92,255,.18));
 }
@@ -1601,6 +1605,15 @@ h1{
   transform:none;
 }
 
+.nav-link-flip.is-active{
+  color:var(--text);
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(139,92,246,.24);
+  padding:0 12px;
+  height:2rem;
+  box-shadow:0 10px 22px rgba(2,6,23,.16);
+}
+
 .nav-link-flip:hover,
 .nav-link-flip:focus-visible{
   color:var(--text);
@@ -1663,6 +1676,10 @@ h1{
 .nav-action.primary:hover,
 .nav-action.primary:focus-visible{
   background:linear-gradient(135deg, rgba(139,92,246,1), rgba(46,229,157,.98));
+}
+
+.nav-action.is-active{
+  box-shadow:0 12px 26px rgba(139,92,246,.20);
 }
 
 .menu-toggle{
@@ -1759,6 +1776,10 @@ h1{
     transform:none;
   }
 
+  .nav-link-flip.is-active{
+    background:rgba(255,255,255,.06);
+  }
+
   .nav-link-text{
     transition:none;
   }
@@ -1766,4 +1787,19 @@ h1{
   .nav-action{
     width:100%;
   }
+}
+
+@keyframes panelReveal{
+  from{
+    opacity:0;
+    transform:translateY(14px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.content-panel.is-entering{
+  animation:panelReveal .28s ease both;
 }

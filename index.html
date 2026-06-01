@@ -79,7 +79,7 @@
 
   <nav class="nav">
     <div class="nav-inner">
-      <a class="brand" href="#top">
+      <a class="brand" href="#home" data-panel-target="home">
         <span class="dot"></span>
         <span id="brandName">Kenzie.dev</span>
       </a>
@@ -91,30 +91,34 @@
 
       <div class="nav-links" id="navLinks">
         <div class="nav-links-list">
-          <a href="#tentang" class="nav-link-flip">
+          <a href="#home" class="nav-link-flip" data-panel-target="home">
+            <span class="nav-link-text">Home</span>
+            <span class="nav-link-text alt" aria-hidden="true">Home</span>
+          </a>
+          <a href="#tentang" class="nav-link-flip" data-panel-target="tentang">
             <span class="nav-link-text">Tentang</span>
             <span class="nav-link-text alt" aria-hidden="true">Tentang</span>
           </a>
-          <a href="#skill" class="nav-link-flip">
+          <a href="#skill" class="nav-link-flip" data-panel-target="skill">
             <span class="nav-link-text">Skill</span>
             <span class="nav-link-text alt" aria-hidden="true">Skill</span>
           </a>
-          <a href="#proyek" class="nav-link-flip">
+          <a href="#proyek" class="nav-link-flip" data-panel-target="proyek">
             <span class="nav-link-text">Proyek</span>
             <span class="nav-link-text alt" aria-hidden="true">Proyek</span>
           </a>
-          <a href="#riset" class="nav-link-flip">
+          <a href="#riset" class="nav-link-flip" data-panel-target="riset">
             <span class="nav-link-text">Riset</span>
             <span class="nav-link-text alt" aria-hidden="true">Riset</span>
           </a>
-          <a href="#prestasi" class="nav-link-flip">
+          <a href="#prestasi" class="nav-link-flip" data-panel-target="prestasi">
             <span class="nav-link-text">Prestasi</span>
             <span class="nav-link-text alt" aria-hidden="true">Prestasi</span>
           </a>
         </div>
 
         <div class="nav-actions">
-          <a class="nav-action primary" href="#proyek">Lihat Proyek</a>
+          <a class="nav-action primary" href="#proyek" data-panel-target="proyek">Lihat Proyek</a>
         </div>
       </div>
     </div>
@@ -122,7 +126,7 @@
 
   <main id="top" class="container">
     <!-- HERO -->
-    <header class="hero card">
+    <header class="hero card content-panel is-active" id="home" data-panel="home">
       <div class="hero-left">
         <div class="badge"><i></i>  Arduino • Embedded • IoT</div>
 
@@ -136,8 +140,8 @@
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="#proyek">Lihat Proyek</a>
-          <a class="btn" href="#riset">Lihat Riset</a>
+          <a class="btn primary" href="#proyek" data-panel-target="proyek">Lihat Proyek</a>
+          <a class="btn" href="#riset" data-panel-target="riset">Lihat Riset</a>
           <a class="btn" id="githubBtn" href="https://github.com/raykenzienazaru-dot" target="_blank" rel="noreferrer">GitHub</a>
         </div>
 
@@ -163,7 +167,7 @@
     </header>
 
     <!-- TENTANG -->
-    <section id="tentang" class="section">
+    <section id="tentang" class="section content-panel" data-panel="tentang" hidden>
       <div class="section-title">
         <h2>Tentang Saya</h2>
         <p>Ringkasan singkat & tujuan.</p>
@@ -179,7 +183,7 @@
     </section>
 
     <!-- SKILL -->
-    <section id="skill" class="section">
+    <section id="skill" class="section content-panel" data-panel="skill" hidden>
       <div class="section-title">
         <h2>Skill</h2>
         <p>Skill utama + yang sedang dipelajari.</p>
@@ -202,7 +206,7 @@
     </section>
 
     <!-- PROYEK -->
-    <section id="proyek" class="section">
+    <section id="proyek" class="section content-panel" data-panel="proyek" hidden>
       <div class="section-title">
         <h2>Proyek Pilihan</h2>
         <p>Ringkasan proyek, komponen, dan tautan detail yang bisa dibuka langsung.</p>
@@ -212,7 +216,7 @@
     </section>
 
     <!-- RISET -->
-    <section id="riset" class="section">
+    <section id="riset" class="section content-panel" data-panel="riset" hidden>
       <div class="section-title">
         <h2>Riset & Perkembangan Skill</h2>
         <p>Catatan belajar, eksperimen, dan insight.</p>
@@ -221,7 +225,7 @@
       <div class="timeline" id="researchTimeline"></div>
     </section>
 
-  <section id="prestasi" class="section">
+  <section id="prestasi" class="section content-panel" data-panel="prestasi" hidden>
   <div class="section-title">
     <h2>Prestasi</h2>
     <p>Beberapa hal yang pernah saya ikuti dan kerjakan.</p>
