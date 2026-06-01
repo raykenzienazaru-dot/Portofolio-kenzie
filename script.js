@@ -310,10 +310,14 @@ function renderResearch(container, items){
 function initLoader(){
   const loader = document.getElementById("pageLoader");
   let finished = false;
+  let finishTimer = null;
+  const MIN_VISIBLE_MS = 4200;
+  const startedAt = performance.now();
 
-  const finish = () => {
+  const commitFinish = () => {
     if (finished) return;
     finished = true;
+    finishTimer = null;
 
     document.body.classList.remove("is-loading");
     document.body.classList.add("is-loaded");
@@ -324,11 +328,130 @@ function initLoader(){
     }
   };
 
+  const finish = () => {
+    if (finished || finishTimer !== null) return;
+
+    const elapsed = performance.now() - startedAt;
+    const delay = Math.max(0, MIN_VISIBLE_MS - elapsed);
+
+    finishTimer = window.setTimeout(commitFinish, delay);
+  };
+
   window.addEventListener("load", finish, { once: true });
-  window.setTimeout(finish, 3000);
+  window.setTimeout(finish, 5000);
+}
+
+function initCustomCursor(){
+  const cursor = document.getElementById("customCursor");
+  if (!cursor) return;
+
+  const canUseCustomCursor =
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!canUseCustomCursor) {
+    cursor.remove();
+    return;
+  }
+
+  document.body.classList.add("has-custom-cursor");
+
+  const interactiveSelector = "a, button, .chip, .link, .project, .achievement, .nav-link-flip, .nav-action, .btn, .menu-toggle";
+  const state = {
+    currentX: window.innerWidth / 2,
+    currentY: window.innerHeight / 2,
+    targetX: window.innerWidth / 2,
+    targetY: window.innerHeight / 2,
+    rotation: 0,
+    hovering: false,
+    pressed: false,
+    visible: false,
+    lastX: window.innerWidth / 2,
+    lastY: window.innerHeight / 2,
+    lastTime: performance.now(),
+  };
+
+  const updateTransform = () => {
+    const scale = state.pressed ? 0.76 : state.hovering ? 1.04 : 0.88;
+    cursor.style.transform =
+      `translate3d(${state.currentX}px, ${state.currentY}px, 0) translate(-50%, -50%) rotate(${state.rotation}deg) scale(${scale})`;
+  };
+
+  const showCursor = () => {
+    if (state.visible) return;
+    state.visible = true;
+    cursor.style.opacity = "1";
+  };
+
+  const hideCursor = () => {
+    state.visible = false;
+    state.hovering = false;
+    state.pressed = false;
+    cursor.classList.remove("is-hovering", "is-pressed");
+    cursor.style.opacity = "0";
+  };
+
+  const setHovering = (target) => {
+    const isHovering = !!target?.closest(interactiveSelector);
+    if (state.hovering === isHovering) return;
+    state.hovering = isHovering;
+    cursor.classList.toggle("is-hovering", isHovering);
+  };
+
+  const handleMove = (event) => {
+    showCursor();
+
+    state.targetX = event.clientX;
+    state.targetY = event.clientY;
+
+    const now = performance.now();
+    const delta = Math.max(1, now - state.lastTime);
+    const dx = event.clientX - state.lastX;
+    const dy = event.clientY - state.lastY;
+    const speed = Math.hypot(dx, dy) / delta;
+
+    if (speed > 0.02) {
+      state.rotation = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+    }
+
+    state.lastX = event.clientX;
+    state.lastY = event.clientY;
+    state.lastTime = now;
+
+    setHovering(event.target instanceof Element ? event.target : null);
+  };
+
+  const handleDown = () => {
+    state.pressed = true;
+    cursor.classList.add("is-pressed");
+  };
+
+  const handleUp = () => {
+    state.pressed = false;
+    cursor.classList.remove("is-pressed");
+  };
+
+  const animate = () => {
+    state.currentX += (state.targetX - state.currentX) * 0.18;
+    state.currentY += (state.targetY - state.currentY) * 0.18;
+    updateTransform();
+    requestAnimationFrame(animate);
+  };
+
+  window.addEventListener("mousemove", handleMove, { passive: true });
+  window.addEventListener("mousedown", handleDown, { passive: true });
+  window.addEventListener("mouseup", handleUp, { passive: true });
+  window.addEventListener("blur", hideCursor);
+  document.addEventListener("mouseleave", hideCursor);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) hideCursor();
+  });
+
+  animate();
 }
 
 initLoader();
+initCustomCursor();
 
 document.addEventListener("DOMContentLoaded", () => {
   /* ---------- INIT DATA ---------- */
