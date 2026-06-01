@@ -1,13 +1,13 @@
 const DATA = {
   profile: {
     name: "Kenzie",
-    role: "Exploring R&D and IoT Technologies",
+    role: "Riset Arduino, ESP32, dan IoT",
     location: "Jakarta, Indonesia",
     email: "raykenzienazaru@gmail.com",
     brand: "kenzie.dev",
     heroDesc:
-      "Saya membuat proyek Arduino,esp32 dan eksperimen IoT, sambil mendokumentasikan perkembangan skill dan riset yang saya pelajari.",
-    quickTags: ["Arduino", "Esp32", "IoT", "Embedded", "Sensor" ,"KTI", "Prototyping"],
+      "Saya membuat proyek Arduino, ESP32, dan eksperimen IoT sambil mendokumentasikan perkembangan skill dan riset yang saya pelajari.",
+    quickTags: ["Arduino", "ESP32", "IoT", "Embedded", "Sensor", "KTI", "Prototyping"],
     socials: [
       { label: "GitHub", url: "https://github.com/raykenzienazaru-dot" },
       { label: "LinkedIn", url: "https://www.linkedin.com/in/raykenzie-nazaru-fathurrahmansyah-774548387?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
@@ -15,7 +15,7 @@ const DATA = {
     ],
     stats: [
       { num: "4+", lbl: "Proyek Arduino" },
-      { num: "10+", lbl: "Sensor/Module dipakai" },
+      { num: "10+", lbl: "Sensor/Modul dipakai" },
       { num: "5", lbl: "Tema riset utama" },
       { num: "Fast", lbl: "Dokumentasi rapi" }
     ]
@@ -25,8 +25,8 @@ const DATA = {
     text: `
       <div class="box-title">Ringkasan diri</div>
       <p>
-        Perkenalkan, saya <b>${"Kenzie"}</b>. Saya fokus membuat prototipe berbasis Arduino/Esp32
-        (sensor, kontrol, otomasi) dan mendokumentasikan perkembangan riset saya Lalu saya juga menyukai dan sering Membuat KTI.
+        Perkenalkan, saya <b>${"Kenzie"}</b>. Saya fokus membuat prototipe berbasis Arduino/ESP32
+        (sensor, kontrol, otomasi) dan mendokumentasikan perkembangan riset saya. Saya juga menyukai dan sering membuat KTI.
         Target saya adalah membangun portofolio yang mudah dipahami: <b>tujuan → komponen → cara kerja → hasil</b>.
       </p>
       <div class="chips" style="margin-top:12px">
@@ -48,7 +48,7 @@ const DATA = {
 
   skills: {
     main: ["Arduino IDE", "C/C++ dasar", "Serial Monitor", "Wiring & Breadboard", "Sensor reading", "Relay/Servo control", "Analisis Data", "Research Skills" ,"Inovasi", "Authentication & ACL" ,"IoT System Design"],
-    learning: ["ESP32 ", "MQTT", "Kalibrasi sensor", "PCB basic", "Data logging", "MQTT Broker", "Real-time Monitoring"]
+    learning: ["ESP32", "MQTT", "Kalibrasi sensor", "PCB basic", "Data logging", "MQTT Broker", "Real-time Monitoring"]
   },
 
   // INI BAGIAN PROYEK ARDUINO KAMU: isi nama alat/proyek sesuai yang kamu mau
@@ -56,17 +56,17 @@ const DATA = {
     {
       name: "Sistem IoT Gas Effectiveness Tawas",
       image: "images/Sistem IoT Gas Effectiveness Tawas.png",
-      type: "Esp32",
+      type: "ESP32",
       summary: "Sistem IoT Gas Effectiveness Tawas adalah sistem berbasis Internet of Things dan AI analisis yang digunakan untuk memantau dan menganalisis efektivitas penggunaan tawas dalam mengendalikan atau menetralkan gas tertentu di suatu lingkungan secara real-time lalu menggunakan Tawas.",
-      components: ["Esp32", "DHT22", "MQ135", "Servo"],
-      features: ["Ambang batas", "Tampilan real-time", "Kalibrasi sederhana", "Website", "AI Analys"],
+      components: ["ESP32", "DHT22", "MQ135", "Servo"],
+      features: ["Ambang batas", "Tampilan real-time", "Kalibrasi sederhana", "Website", "AI Analysis"],
       demoUrl: "https://si-geta.vercel.app/",
       repoUrl: "https://si-geta.vercel.app/"
     },
     {
       name: "AIR.CEK",
       image: "images/AIR.CEK.png",
-      type: "AI logic",
+      type: "AI Logic",
       summary: "Kami mengembangkan AIR.ai, sebuah website berbasis AI logic untuk menganalisis dan menentukan kelayakan kualitas air, khususnya berdasarkan nilai pH. Sistem ini membantu memantau kondisi air di sekolah dan fasilitas umum serta memberikan rekomendasi solusi jika kualitas air berada di luar standar.",
       components: ["AI Logic", "Website", "Domain", "IoT (opsional)"],
       features: ["Chat Bot", "Analisis air", "Indikator Bahaya, Waspada"],
@@ -76,27 +76,29 @@ const DATA = {
     {
       name: "SOFIA",
       image: "images/SOFIA.png",
-      type: "Esp32",
+      type: "ESP32",
       summary: "Kami memperkenalkan SOFIA, sebuah sistem cerdas berbasis IoT, website monitoring, dan AI logic yang memantau dan menganalisis kondisi lingkungan, keamanan, dan potensi bahaya secara real-time. Sistem ini mendukung pengelolaan fasilitas kantor yang lebih efisien, aman, dan berbasis data melalui pengambilan keputusan yang cepat dan akurat.",
-      components: ["Esp32", "PIR", "DHT22", "MQ135", "FLEM", "Ultrasonic"],
+      components: ["ESP32", "PIR", "DHT22", "MQ135", "FLEM", "Ultrasonic"],
       features: ["Analisis Kebakaran", "Peringatan dini", "Monitor Jarak Jauh", "Analisis Tindakan Mencurigakan DLL"],
       demoUrl: "https://sofia-lime.vercel.app/",
       repoUrl: "https://sofia-lime.vercel.app/"
     },
     {
- name: "GWS",
+      name: "GWS",
       image: "images/GWS.jpeg",
-      type: "Esp32",
+      type: "ESP32",
       summary: "Kami membuat GWS dan GWS adalah sistem berbasis Internet of Things (IoT), website monitoring, dan Artificial Intelligence (AI) yang memantau dan menganalisis kualitas air secara real-time. Sistem ini membantu klasifikasi kelayakan air, pelaporan masyarakat, serta mendukung pengelolaan sanitasi yang lebih efisien, akurat, dan berbasis data.",
-      components: ["Esp32", "Sensor PH air",],
-      features: ["Analisis Kandungan air", "Peringatan dini", "Monitor Jarak Jauh", "Informasi solusi jika kualitas air buruk"],
+      components: ["ESP32", "Sensor pH air"],
+      features: ["Analisis kandungan air", "Peringatan dini", "Monitor Jarak Jauh", "Informasi solusi jika kualitas air buruk"],
+      demoUrl: "files/GWS.pdf",
+      demoLabel: "PDF"
     },
     {
         name: "SOFIA PEMUDA PELOPOR",
       image: "images/SOFIA.jpeg",
-      type: "Esp32",
+      type: "ESP32",
       summary: "Saya membuat SOFIA ini dan SOFIA adalah sistem berbasis Internet of Things (IoT), website monitoring, dan Artificial Intelligence (AI) yang memantau dan menganalisis kondisi gudang hasil panen secara real-time dan menggunakan telegram. Sistem ini membantu menjaga kualitas hasil panen, meningkatkan keamanan, serta memberikan notifikasi otomatis untuk mendukung pengelolaan yang lebih efisien dan berbasis data.",
-      components: ["Esp32", "PIR", "DHT22", "MQ135", "FLEM", "Ultrasonic"],
+      components: ["ESP32", "PIR", "DHT22", "MQ135", "FLEM", "Ultrasonic"],
       features: ["Analisis Kebakaran", "Peringatan dini", "Monitor Jarak Jauh", "Analisis Tindakan Mencurigakan DLL"],
       demoUrl: "https://sofia-ai.pages.dev/",
       repoUrl: "https://sofia-ai.pages.dev/"
@@ -104,10 +106,10 @@ const DATA = {
     {
       name: "SIGEMA",
       image: "images/SIGEMA.png",
-      type: "Esp32",
+      type: "ESP32",
       summary: "SIGEMA adalah lemari pintar berbasis IoT yang memantau kelembapan secara real-time menggunakan DHT22 dan ESP32, serta memberikan peringatan melalui buzzer dan website saat silica gel jenuh untuk mencegah kerusakan dokumen dan perangkat akibat korosi dan oksidasi, Disini saya sebagai Penulis.",
-      components: ["Esp32", "OLED", "DHT22", "Silical gel"],
-      features: ["Minotoring"],
+      components: ["ESP32", "OLED", "DHT22", "Silica gel"],
+      features: ["Monitoring"],
       demoUrl: "https://si-gema.vercel.app/#mitra",
       repoUrl: "https://si-gema.vercel.app/#mitra"
     },
@@ -119,6 +121,7 @@ const DATA = {
       components: ["Serabut Kelapa", "Kayu manis", "Sarung bantal"],
       features: ["Bantal Alami"],
       demoUrl: "files/BALAP-SA.pdf",
+      demoLabel: "PDF",
       repoUrl: "files/BALAP-SA.pdf"
     }
   ],
@@ -190,6 +193,29 @@ const $ = (id) => document.getElementById(id);
 const escapeHtml = (s) =>
   String(s).replace(/[&<>"']/g, (m) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;" }[m]));
 
+const IMAGE_FALLBACK = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Preview unavailable">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="55%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity=".55" />
+      <stop offset="70%" stop-color="#2dd4bf" stop-opacity=".12" />
+      <stop offset="100%" stop-color="#020617" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" rx="40" fill="url(#bg)" />
+  <rect width="1200" height="800" rx="40" fill="url(#glow)" />
+  <g fill="#e2e8f0" font-family="Arial, Helvetica, sans-serif">
+    <text x="72" y="640" font-size="54" font-weight="700">Preview unavailable</text>
+    <text x="72" y="700" font-size="28" opacity=".72">Open the project link to see more.</text>
+  </g>
+</svg>
+`)}`;
+
 function renderChips(container, items, asLinks = false){
   container.innerHTML = items.map(it => {
     if(asLinks) return `<a class="chip" href="${escapeHtml(it.url)}" target="_blank" rel="noreferrer">${escapeHtml(it.label)}</a>`;
@@ -207,35 +233,54 @@ function renderStats(container, stats){
 }
 
 function renderProjects(container, projects){
-  container.innerHTML = projects.map(p => `
+  container.innerHTML = projects.map((p, index) => {
+    const componentChips = (p.components || []).map(item => `<span class="chip">${escapeHtml(item)}</span>`).join("");
+    const featureChips = (p.features || []).map(item => `<span class="chip">${escapeHtml(item)}</span>`).join("");
+    const demoLabel = p.demoLabel || (p.repoUrl && p.repoUrl === p.demoUrl ? "Lihat Proyek" : "Demo / Video");
+    const repoLabel = p.repoLabel || "Detail";
+    const links = [
+      p.demoUrl
+        ? `<a class="link primary" href="${escapeHtml(p.demoUrl)}" target="_blank" rel="noreferrer">${escapeHtml(demoLabel)}</a>`
+        : "",
+      p.repoUrl && p.repoUrl !== p.demoUrl
+        ? `<a class="link" href="${escapeHtml(p.repoUrl)}" target="_blank" rel="noreferrer">${escapeHtml(repoLabel)}</a>`
+        : ""
+    ].filter(Boolean).join("");
+
+    return `
     <article class="project">
-
-   <img 
-  class="card-img" 
-  src="${escapeHtml(p.image)}" 
-  alt="${escapeHtml(p.name)}"
-  onerror="this.onerror=null; this.src='images/placeholder.png';"
->
-
+      <img
+        class="card-img"
+        src="${escapeHtml(p.image)}"
+        alt="${escapeHtml(p.name)}"
+        loading="lazy"
+        decoding="async"
+        onerror="this.onerror=null;this.src='${IMAGE_FALLBACK}'"
+      >
 
       <div class="project-top">
-        <h3>${escapeHtml(p.name)}</h3>
+        <div>
+          <div class="eyebrow">Proyek ${String(index + 1).padStart(2, "0")}</div>
+          <h3>${escapeHtml(p.name)}</h3>
+        </div>
         <span class="pill">${escapeHtml(p.type)}</span>
       </div>
 
-      <p>${escapeHtml(p.summary)}</p>
+      <p class="project-summary">${escapeHtml(p.summary)}</p>
 
-      <div class="meta">
-        <span class="kv"><b>Komponen:</b> ${escapeHtml(p.components.join(", "))}</span>
-        <span class="kv"><b>Fitur:</b> ${escapeHtml(p.features.join(", "))}</span>
+      <div class="meta-block">
+        <div class="meta-label">Komponen</div>
+        <div class="chips chips-inline">${componentChips}</div>
       </div>
 
-      <div class="links">
-        <a class="link" href="${escapeHtml(p.demoUrl)}" target="_blank">Demo/Video</a>
-        <a class="link" href="${escapeHtml(p.repoUrl)}" target="_blank">Repo</a>
+      <div class="meta-block">
+        <div class="meta-label">Fitur</div>
+        <div class="chips chips-inline">${featureChips}</div>
       </div>
-    </article>
-  `).join("");
+
+      <div class="links">${links}</div>
+    </article>`;
+  }).join("");
 }
 
 
@@ -261,6 +306,29 @@ function renderResearch(container, items){
     </div>
   `).join("");
 }
+
+function initLoader(){
+  const loader = document.getElementById("pageLoader");
+  let finished = false;
+
+  const finish = () => {
+    if (finished) return;
+    finished = true;
+
+    document.body.classList.remove("is-loading");
+    document.body.classList.add("is-loaded");
+
+    if (loader) {
+      loader.setAttribute("aria-hidden", "true");
+      window.setTimeout(() => loader.remove(), 550);
+    }
+  };
+
+  window.addEventListener("load", finish, { once: true });
+  window.setTimeout(finish, 3000);
+}
+
+initLoader();
 
 document.addEventListener("DOMContentLoaded", () => {
   /* ---------- INIT DATA ---------- */
@@ -308,27 +376,47 @@ document.addEventListener("DOMContentLoaded", () => {
     safe("year").textContent = new Date().getFullYear();
 
   const toggle = document.getElementById("menuToggle");
-  const navLinks = document.querySelector(".nav-links");
+  const navLinks = document.getElementById("navLinks");
 
 if (toggle && navLinks) {
-  toggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    toggle.classList.toggle("active");
+  const closeMenu = () => {
+    navLinks.classList.remove("active");
+    toggle.classList.remove("active");
+    toggle.setAttribute("aria-expanded", "false");
+  };
+
+  const toggleMenu = () => {
+    const isOpen = navLinks.classList.toggle("active");
+    toggle.classList.toggle("active", isOpen);
+    toggle.setAttribute("aria-expanded", String(isOpen));
+  };
+
+  toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    toggleMenu();
   });
 
   const links = navLinks.querySelectorAll("a");
   if (links) {
     links.forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        toggle.classList.remove("active");
-      });
+      link.addEventListener("click", closeMenu);
     });
   }
 
+  document.addEventListener("click", (event) => {
+    if (!navLinks.contains(event.target) && !toggle.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
   window.addEventListener("scroll", () => {
-    navLinks.classList.remove("active");
-    toggle.classList.remove("active");
+    closeMenu();
+  }, { passive: true });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
   });
 }
 

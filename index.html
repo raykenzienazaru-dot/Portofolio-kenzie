@@ -5,28 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portofolio | Raykenzie</title>
   <meta name="description" content="Portofolio: proyek Arduino, skill, dan perkembangan riset." />
+  <meta name="theme-color" content="#050816" />
   <link rel="stylesheet" href="style.css" />
+  <noscript>
+    <style>
+      body.is-loading{ overflow:auto !important; }
+      .preloader{ display:none !important; }
+    </style>
+  </noscript>
 </head>
 
-<body>
+<body class="is-loading">
+  <div class="preloader" id="pageLoader" role="status" aria-live="polite" aria-label="Memuat portofolio">
+    <div class="preloader-inner">
+      <div class="loader" aria-hidden="true"></div>
+      <div class="preloader-copy">
+        <strong>Memuat portofolio</strong>
+        <p>Menyiapkan proyek, riset, dan prestasi...</p>
+      </div>
+    </div>
+  </div>
+
   <nav class="nav">
     <div class="nav-inner">
       <a class="brand" href="#top">
         <span class="dot"></span>
         <span id="brandName">Kenzie.dev</span>
       </a>
-<button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu" aria-controls="navLinks" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      <div class="nav-links">
-        <a href="#tentang">Tentang</a>
-        <a href="#skill">Skill</a>
-        <a href="#proyek">Proyek </a>
-        <a href="#riset">Riset & Perkembangan</a>
-        <a href="#prestasi">Prestasi</a>
+      <div class="nav-links" id="navLinks">
+        <div class="nav-links-list">
+          <a href="#tentang" class="nav-link-flip">
+            <span class="nav-link-text">Tentang</span>
+            <span class="nav-link-text alt" aria-hidden="true">Tentang</span>
+          </a>
+          <a href="#skill" class="nav-link-flip">
+            <span class="nav-link-text">Skill</span>
+            <span class="nav-link-text alt" aria-hidden="true">Skill</span>
+          </a>
+          <a href="#proyek" class="nav-link-flip">
+            <span class="nav-link-text">Proyek</span>
+            <span class="nav-link-text alt" aria-hidden="true">Proyek</span>
+          </a>
+          <a href="#riset" class="nav-link-flip">
+            <span class="nav-link-text">Riset</span>
+            <span class="nav-link-text alt" aria-hidden="true">Riset</span>
+          </a>
+          <a href="#prestasi" class="nav-link-flip">
+            <span class="nav-link-text">Prestasi</span>
+            <span class="nav-link-text alt" aria-hidden="true">Prestasi</span>
+          </a>
+        </div>
+
+        <div class="nav-actions">
+          <a class="nav-action" href="mailto:raykenzienazaru@gmail.com">Kontak</a>
+          <a class="nav-action primary" href="#proyek">Lihat Proyek</a>
+        </div>
       </div>
     </div>
   </nav>
@@ -115,8 +154,8 @@
     <!-- PROYEK -->
     <section id="proyek" class="section">
       <div class="section-title">
-        <h2>Proyek ESP32 DLL</h2>
-        <p>Nama proyek/alat + ringkasan + komponen.</p>
+        <h2>Proyek Pilihan</h2>
+        <p>Ringkasan proyek, komponen, dan tautan detail yang bisa dibuka langsung.</p>
       </div>
 
       <div class="grid" id="projectsGrid"></div>
@@ -144,7 +183,7 @@
         <div class="box-title">Lomba & Event</div>
 
         <div class="achievement">
-             <img class="card-img" src="images/KIP.png" alt="Sertifikat Juara 3">
+          <img class="card-img" src="images/KIP.png" alt="Sertifikat Juara 3 KIP Jakarta Pusat" loading="lazy" decoding="async">
           <h4>JUARA 3 KIP JAKARTA PUSAT</h4>
           <small>KIP • 2025</small>
           <p>
@@ -155,7 +194,7 @@ efektivitas silica gel.
         </div>
 
         <div class="achievement">
-            <img class="card-img" src="images/PNJ.png">
+          <img class="card-img" src="images/PNJ.png" alt="Sertifikat Juara 1 ITechnoCup Jakarta Pusat" loading="lazy" decoding="async">
           <h4>JUARA 1 ITechnoCup JAKARTA PUSAT</h4>
           <small>UNIV • 2025</small>
           <p>
@@ -164,7 +203,7 @@ efektivitas silica gel.
           </p>
         </div>
          <div class="achievement">
-            <img class="card-img" src="images/SIGETA ITB WIDYA GAMA .jpg">
+          <img class="card-img" src="images/SIGETA ITB WIDYA GAMA .jpg" alt="Sertifikat Juara 1 ITB Widya Gama" loading="lazy" decoding="async">
           <h4>JUARA 1 ITB WIDYA GAMA</h4>
           <small>UNIV • 2025</small>
           <p>
@@ -173,7 +212,7 @@ efektivitas silica gel.
           </p>
         </div>
          <div class="achievement">
-            <img class="card-img" src="images/BALAP-SA.png">
+          <img class="card-img" src="images/BALAP-SA.png" alt="Dokumentasi BALAP-SA" loading="lazy" decoding="async">
           <h4>Peserta PP</h4>
           <small>PP • 2024</small>
           <p>
