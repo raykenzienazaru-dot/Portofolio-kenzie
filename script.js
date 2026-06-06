@@ -123,6 +123,47 @@ const DATA = {
       demoUrl: "files/BALAP-SA.pdf",
       demoLabel: "PDF",
       repoUrl: "files/BALAP-SA.pdf"
+    },
+    {
+      name: "Toko Novi",
+      image: "images/UMKM.jpeg",
+      type: "UMKM",
+      summary: "I developed this e-commerce website to support my parents' business by improving its digital promotion, marketing, and sales management. The platform allows customers to browse products and place orders online while helping business owners efficiently manage sales, customer data, and business reports through an integrated dashboard.",
+      components: ["HTML", "CSS", "JavaScript", "SUPABASE"],
+      features: ["ECOMMERCE", "DASHBOARD", "PAYMENT GATEWAY"],
+      demoUrl: "https://tokonovi.vercel.app/",
+      repoUrl: "https://github.com/raykenzienazaru-dot/TokoNovi"
+    },
+    {
+      name: "SuperClean",
+      image: "images/SUPERCLEAN.JPEG",
+      type: "Jasa Kebersihan",
+      summary: "Developed a professional website for a home cleaning service business to enhance digital promotion, strengthen brand credibility, and attract potential customers. The platform showcases services, work portfolios, and customer information through a modern and responsive user interface. Built using HTML, CSS, and JavaScript with a focus on user experience, accessibility, and business growth.",
+      components: ["HTML", "CSS", "JavaScript"],
+      features: ["kebersihan rumah", "profesional", "terpercaya"],
+      demoUrl: "https://superclean-fawn.vercel.app/",
+      repoUrl: "https://github.com/raykenzienazaru-dot/cucicleane"
+    }
+    ,
+    {
+      name: "Golden Bolu",
+      image: "images/BOLU.JPEG",
+      type: "UMKM",
+      summary: "Developed a responsive business website for a local bakery and traditional cake business to strengthen digital marketing, increase brand visibility, and improve customer engagement. The platform showcases products, galleries, customer reviews, and contact information through a modern and user-friendly interface built with HTML, CSS, and JavaScript.",
+      components: ["HTML", "CSS", "JavaScript"],
+      features: ["Pembuatan Kue", "Kue Ulang Tahun", "Kue Modern"],
+      demoUrl: "https://bolu-ten.vercel.app/",
+      repoUrl: "https://github.com/raykenzienazaru-dot/bolu"
+    },
+    {
+      name: "HealReminder AI",
+      image: "images/AI.JPEG",
+      type: "Kesehatan",
+      summary: "I developed a health reminder and monitoring web application to help users maintain healthy daily habits through activity tracking and automated Telegram notifications. The platform allows users to monitor BMI, water intake, sleep quality, and medication schedules through a centralized dashboard. Built using HTML, CSS, and JavaScript with Local Storage for data management, the application provides a lightweight and accessible solution for improving consistency in healthy routines and promoting overall well-being.",
+      components: ["HTML", "CSS", "JavaScript", "Telegram Bot API"],
+      features: ["Kesehatan", "Pengingat Otomatis", "Pemantauan Aktivitas"],
+      demoUrl: "https://healreminder.pages.dev/",
+      repoUrl: "https://github.com/raykenzienazaru-dot/Kesehatan"
     }
   ],
 
