@@ -136,7 +136,7 @@ const DATA = {
     },
     {
       name: "SuperClean",
-      image: "images/SUPERCLEAN.JPEG",
+      image: "images/SUPERCLEAN.jpeg",
       type: "Jasa Kebersihan",
       summary: "Developed a professional website for a home cleaning service business to enhance digital promotion, strengthen brand credibility, and attract potential customers. The platform showcases services, work portfolios, and customer information through a modern and responsive user interface. Built using HTML, CSS, and JavaScript with a focus on user experience, accessibility, and business growth.",
       components: ["HTML", "CSS", "JavaScript"],
@@ -147,7 +147,7 @@ const DATA = {
     ,
     {
       name: "Golden Bolu",
-      image: "images/BOLU.JPEG",
+      image: "images/BOLU.jpeg",
       type: "UMKM",
       summary: "Developed a responsive business website for a local bakery and traditional cake business to strengthen digital marketing, increase brand visibility, and improve customer engagement. The platform showcases products, galleries, customer reviews, and contact information through a modern and user-friendly interface built with HTML, CSS, and JavaScript.",
       components: ["HTML", "CSS", "JavaScript"],
@@ -157,7 +157,7 @@ const DATA = {
     },
     {
       name: "HealReminder AI",
-      image: "images/AI.JPEG",
+      image: "images/AI.jpeg",
       type: "Kesehatan",
       summary: "I developed a health reminder and monitoring web application to help users maintain healthy daily habits through activity tracking and automated Telegram notifications. The platform allows users to monitor BMI, water intake, sleep quality, and medication schedules through a centralized dashboard. Built using HTML, CSS, and JavaScript with Local Storage for data management, the application provides a lightweight and accessible solution for improving consistency in healthy routines and promoting overall well-being.",
       components: ["HTML", "CSS", "JavaScript", "Telegram Bot API"],
