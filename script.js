@@ -136,7 +136,7 @@ const DATA = {
     },
     {
       name: "SuperClean",
-      image: "images/SUPERCLEAN.png",
+      image: "images/su.png",
       type: "Jasa Kebersihan",
       summary: "Developed a professional website for a home cleaning service business to enhance digital promotion, strengthen brand credibility, and attract potential customers. The platform showcases services, work portfolios, and customer information through a modern and responsive user interface. Built using HTML, CSS, and JavaScript with a focus on user experience, accessibility, and business growth.",
       components: ["HTML", "CSS", "JavaScript"],
