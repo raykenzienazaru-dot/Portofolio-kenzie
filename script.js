@@ -126,7 +126,7 @@ const DATA = {
     },
     {
       name: "Toko Novi",
-      image: "images/UMKM.jpeg",
+      image: "images/UMKM.png",
       type: "UMKM",
       summary: "I developed this e-commerce website to support my parents' business by improving its digital promotion, marketing, and sales management. The platform allows customers to browse products and place orders online while helping business owners efficiently manage sales, customer data, and business reports through an integrated dashboard.",
       components: ["HTML", "CSS", "JavaScript", "SUPABASE"],
@@ -136,7 +136,7 @@ const DATA = {
     },
     {
       name: "SuperClean",
-      image: "images/SUPERCLEAN.jpeg",
+      image: "images/SUPERCLEAN.png",
       type: "Jasa Kebersihan",
       summary: "Developed a professional website for a home cleaning service business to enhance digital promotion, strengthen brand credibility, and attract potential customers. The platform showcases services, work portfolios, and customer information through a modern and responsive user interface. Built using HTML, CSS, and JavaScript with a focus on user experience, accessibility, and business growth.",
       components: ["HTML", "CSS", "JavaScript"],
@@ -147,7 +147,7 @@ const DATA = {
     ,
     {
       name: "Golden Bolu",
-      image: "images/BOLU.jpeg",
+      image: "images/BOLU.png",
       type: "UMKM",
       summary: "Developed a responsive business website for a local bakery and traditional cake business to strengthen digital marketing, increase brand visibility, and improve customer engagement. The platform showcases products, galleries, customer reviews, and contact information through a modern and user-friendly interface built with HTML, CSS, and JavaScript.",
       components: ["HTML", "CSS", "JavaScript"],
@@ -157,7 +157,7 @@ const DATA = {
     },
     {
       name: "HealReminder AI",
-      image: "images/AI.jpeg",
+      image: "images/AI.png",
       type: "Kesehatan",
       summary: "I developed a health reminder and monitoring web application to help users maintain healthy daily habits through activity tracking and automated Telegram notifications. The platform allows users to monitor BMI, water intake, sleep quality, and medication schedules through a centralized dashboard. Built using HTML, CSS, and JavaScript with Local Storage for data management, the application provides a lightweight and accessible solution for improving consistency in healthy routines and promoting overall well-being.",
       components: ["HTML", "CSS", "JavaScript", "Telegram Bot API"],
