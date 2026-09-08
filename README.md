@@ -1,6 +1,6 @@
 # Raykenzie Portfolio 2026
 
-An editorial portfolio for Raykenzie Nazaru Fathurrahmansyah, built with React, Vite and Tailwind CSS. Includes fourteen projects, a clearly attributed WARU collaboration, an EduInsight AI / UNJ UI/UX spotlight, six achievements and seventeen research resources: nine original PDFs plus eight dataset, model and firmware links.
+An editorial portfolio for Raykenzie Nazaru Fathurrahmansyah, built with React, Vite and Tailwind CSS. Includes fourteen R&D-driven GitHub projects, a clearly attributed WARU collaboration, an EduInsight AI / UNJ UI/UX spotlight, seven achievements and seventeen research resources: nine original PDFs plus eight dataset, model and firmware links.
 
 ## Source of truth
 

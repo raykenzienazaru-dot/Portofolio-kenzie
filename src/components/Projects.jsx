@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, Plus, Library } from "lucide-react";
+import { ArrowUpRight, Plus, Library, FlaskConical } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import ProjectCard from "./ProjectCard";
 import ResearchSpotlight from "./ResearchSpotlight";
@@ -38,6 +38,20 @@ export default function Projects() {
           </p>
         </div>
         <ResearchSpotlight />
+        <aside
+          className="rnd-throughline"
+          aria-label="Research and development approach"
+        >
+          <FlaskConical size={25} strokeWidth={1.35} aria-hidden="true" />
+          <div>
+            <span className="eyebrow">R&D / Across the GitHub archive</span>
+            <p>
+              The projects shown here grow through research and development:
+              studying the problem, prototyping an approach, testing the system
+              and refining the result.
+            </p>
+          </div>
+        </aside>
         <div className="collection-heading">
           <h3 className="eyebrow">Explore the project index</h3>
           <a href="#research">

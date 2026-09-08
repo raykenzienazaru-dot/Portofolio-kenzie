@@ -30,7 +30,20 @@ try {
       "RAYKENZIE",
     );
     await expect(page.locator(".project-card")).toHaveCount(6);
-    await expect(page.locator(".achievement-item")).toHaveCount(6);
+    await expect(page.locator(".achievement-item")).toHaveCount(7);
+    await expect(
+      page.getByRole("heading", { name: "UI/UX Design Competition" }),
+    ).toBeVisible();
+    await expect(page.locator(".achievements-list")).toContainText(
+      "INACOMP 2.0 · Universitas Negeri Jakarta",
+    );
+    await expect(page.locator(".achievements-list")).toContainText("Juara 3");
+    await expect(page.locator(".rnd-throughline")).toContainText(
+      "research and development",
+    );
+    await expect(page.locator(".main-nav .nav-active-indicator")).toHaveCount(
+      1,
+    );
     const overflow = await page.evaluate(() => ({
       viewport: innerWidth,
       document: document.documentElement.scrollWidth,
@@ -51,11 +64,14 @@ try {
     ]) {
       if (width < 960)
         await page.getByRole("button", { name: "Open menu" }).click();
-      await page
+      const navigationLink = page
         .getByRole("navigation", { name: "Main navigation" })
-        .getByRole("link", { name, exact: true })
-        .click();
+        .getByRole("link", { name, exact: true });
+      await navigationLink.click();
       await expect(page).toHaveURL(new RegExp(`#${name.toLowerCase()}$`));
+      await expect(
+        page.locator(`.main-nav a[href="#${name.toLowerCase()}"]`),
+      ).toHaveAttribute("aria-current", "location");
       const rect = await page.locator(`#${name.toLowerCase()}`).boundingBox();
       expect(rect.y, `${name} hidden by header`).toBeGreaterThanOrEqual(60);
       // The last section cannot align to the top when the document has reached its end.
@@ -81,7 +97,7 @@ try {
       await expect(page.getByRole("navigation")).toBeHidden();
     }
 
-    const expected = { WEB: 8, IoT: 6, AI: 6, "R&D": 4, ALL: 14 };
+    const expected = { WEB: 8, IoT: 6, AI: 6, "R&D": 14, ALL: 14 };
     for (const [filter, count] of Object.entries(expected)) {
       await page.getByRole("button", { name: filter, exact: true }).click();
       await expect(page.locator(".project-card")).toHaveCount(

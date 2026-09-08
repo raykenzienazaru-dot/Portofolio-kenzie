@@ -141,6 +141,19 @@ svg {
   z-index: 30;
   background: var(--color-floral);
   border-bottom: 1px solid var(--color-bone);
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease;
+}
+.nav-progress {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: var(--color-olive);
+  transform-origin: left center;
 }
 .nav-inner {
   min-height: 90px;
@@ -154,10 +167,31 @@ svg {
   min-height: 70px;
 }
 .wordmark {
+  position: relative;
   font-size: 30px;
   font-weight: 600;
   letter-spacing: -2px;
   line-height: 1;
+  transition:
+    letter-spacing 300ms ease,
+    transform 300ms ease;
+}
+.wordmark::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  bottom: -8px;
+  width: 7px;
+  height: 2px;
+  background: var(--color-olive);
+  transition: width 300ms ease;
+}
+.wordmark:hover {
+  letter-spacing: -1px;
+  transform: translateY(-1px);
+}
+.wordmark:hover::after {
+  width: 28px;
 }
 .wordmark span {
   color: var(--color-olive);
@@ -168,26 +202,43 @@ svg {
   margin-left: auto;
 }
 .main-nav a {
+  isolation: isolate;
   font-size: 11px;
   font-weight: 500;
-  padding-block: 12px;
+  padding: 12px 10px;
   position: relative;
+  transition:
+    color 250ms ease,
+    transform 250ms ease;
 }
 .main-nav a::after {
   content: "";
   position: absolute;
   height: 1px;
-  bottom: 6px;
-  left: 0;
-  right: 0;
+  bottom: 5px;
+  left: 10px;
+  right: 10px;
   background: currentColor;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 300ms;
 }
 .main-nav a:hover::after,
-.main-nav a[aria-current]::after {
+.main-nav a:focus-visible::after {
   transform: scaleX(1);
+}
+.main-nav a:hover {
+  transform: translateY(-1px);
+}
+.nav-label {
+  position: relative;
+  z-index: 1;
+}
+.nav-active-indicator {
+  position: absolute;
+  z-index: -1;
+  inset: 3px 0;
+  background: var(--color-bone);
 }
 .social-links {
   display: flex;
@@ -1022,11 +1073,19 @@ svg {
   }
   .main-nav a {
     font-size: 17px;
-    padding: 15px 0;
+    padding: 15px 18px;
+    transform-origin: left center;
+    animation: nav-item-enter 360ms both;
+    animation-delay: calc(var(--nav-index) * 35ms);
   }
   .main-nav a::after {
+    left: 18px;
     right: auto;
     width: 35px;
+  }
+  .nav-active-indicator {
+    inset: 5px 0;
+    border-left: 3px solid var(--color-olive);
   }
   .hero-layout {
     grid-template-columns: 1.25fr 1fr;
@@ -1131,6 +1190,16 @@ svg {
   .contact-title > svg {
     width: 130px;
     height: 130px;
+  }
+}
+@keyframes nav-item-enter {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 @media (max-width: 640px) {

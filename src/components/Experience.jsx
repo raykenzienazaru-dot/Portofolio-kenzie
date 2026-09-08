@@ -4,7 +4,7 @@ const journey = [
     time: "2026",
     title: "EduInsight AI · INACOMP 2.0",
     role: "UI/UX · Research & Development (R&D)",
-    text: "A team NAVI learning-platform proposal for the UI/UX Design Competition at Universitas Negeri Jakarta. Research-led design connecting student needs, gamified learning and teacher analytics.",
+    text: "Third place at INACOMP 2.0, Universitas Negeri Jakarta, with team NAVI. Research-led design connecting student needs, gamified learning and teacher analytics.",
   },
   {
     time: "2026",

@@ -5,7 +5,7 @@ The owner's PDF PRD is the primary content/design specification. The root `.md` 
 ## Identity, achievements and portrait
 
 - Full name, school, SIJA program, location, interests, skills and contact accounts: PRD sections 3–5.
-- Six competition placements: PRD §4.5. Only GRENVIS/GLITER JAK has an explicit achievement year (2026). Other years remain absent. Example dates in the `.md` are not treated as confirmed chronology.
+- Six competition placements: PRD §4.5. A seventh placement, third place at INACOMP 2.0 UNJ, was subsequently confirmed by the owner with a result screenshot. Only GRENVIS/GLITER JAK and INACOMP 2.0 have explicit achievement years (2026). Other years remain absent. Example dates in the `.md` are not treated as confirmed chronology.
 - GRENVIS technology summary: the owner's `.md` achievement brief.
 - Portrait: `Foto.jpeg`, explicitly selected by the owner during implementation. `public/images/raykenzie.webp` is an optimized copy; monochrome presentation is applied by CSS. No generated person or GitHub character avatar is used.
 - Instagram is `https://www.instagram.com/zienaru_/` per PRD, replacing the different handle in the old code.
@@ -45,7 +45,7 @@ The owner subsequently requested inclusion of KTI PDFs, the UNJ UI/UX competitio
 
 ### EduInsight AI / INACOMP 2.0
 
-Primary source: the owner-provided [`PROPOSAL LOMBA UI UNJ FINAL.pdf`](../PROPOSAL%20LOMBA%20UI%20UNJ%20FINAL.pdf), 46 pages, cover year 2026 and preface dated 22 June 2026. The cover lists team NAVI, including Raykenzie. The proposal identifies UI/UX Design Competition INACOMP 2.0, Universitas Negeri Jakarta. The owner explicitly confirmed **Research & Development (R&D)** in this conversation. No placement, award, sole ownership or deployed application is claimed.
+Primary source: the owner-provided [`PROPOSAL LOMBA UI UNJ FINAL.pdf`](../PROPOSAL%20LOMBA%20UI%20UNJ%20FINAL.pdf), 46 pages, cover year 2026 and preface dated 22 June 2026. The cover lists team NAVI, including Raykenzie. The proposal identifies UI/UX Design Competition INACOMP 2.0, Universitas Negeri Jakarta. The owner explicitly confirmed **Research & Development (R&D)** in this conversation. A later owner-provided result screenshot identifies team NAVI from SMKN 1 Jakarta as **Juara 3**; the achievement and journey now reflect that placement. No sole ownership or deployed application is claimed.
 
 The description summarizes the proposal's learning concept: gamification/quizzes, AI chatbot/flashcards, class administration and teacher analytics. The spotlight's student mockup is extracted from PDF page 21. The Figma prototype URL is taken from the PDF link annotations, with the temporary sharing token omitted. It is a source-linked prototype, not an independently verified live application.
 
@@ -81,9 +81,11 @@ Organic Farming SOFIA and Smart Office SOFIA are separately named papers. They a
 
 The `PNJ` README describes FABRIX AI, so it was not counted again. Other inspected repositories without sufficient distinct evidence were not turned into invented project cards.
 
+The owner also clarified that the GitHub portfolio is broadly the output of their R&D process. All fourteen displayed repositories therefore participate in the R&D filter. This label describes the process—problem research, prototyping, testing and refinement—and does not overwrite the more specific project categories or claim sole ownership of team work.
+
 ### Public profiles and access limits
 
-The indexed public [LinkedIn profile](https://id.linkedin.com/in/raykenzie-nazaru-fathurrahmansyah-774548387) corroborates the UNJ participation and lists AI Ready ASEAN, ASEAN Foundation, July 2026. The latter appears as a learning credential, separate from the six competition placements. Direct LinkedIn access was rate-limited; only accessible indexed content was used.
+The indexed public [LinkedIn profile](https://id.linkedin.com/in/raykenzie-nazaru-fathurrahmansyah-774548387) corroborates the UNJ participation and lists AI Ready ASEAN, ASEAN Foundation, July 2026. The latter appears as a learning credential, separate from the seven competition placements. Direct LinkedIn access was rate-limited; only accessible indexed content was used.
 
 [Instagram](https://www.instagram.com/zienaru_/) could not be reliably read because access was throttled. The verified PRD profile link remains available, but no new project, award or date was inferred from inaccessible posts.
 

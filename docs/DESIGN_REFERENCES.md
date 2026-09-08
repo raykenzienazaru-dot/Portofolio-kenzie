@@ -11,3 +11,5 @@ No gated component source was retrieved or copied, and no 21st.dev registry comp
 The EduInsight spotlight uses a real interface mockup extracted from page 21 of the owner's UNJ proposal. Document thumbnails are rendered from original PDFs. TokoNovi and HealReminder previews are browser captures from their actual deployments; the sensor-model image is the repository's actual confusion matrix and is labeled as synthetic-data evaluation.
 
 The expanded collections initially show six items and provide explicit controls to reveal the rest. The research archive includes category filters, text search, empty-state recovery and an on-demand native dialog with PDF, new-tab and download options. Motion respects `prefers-reduced-motion`; focus returns to the opener when the viewer closes.
+
+The sticky navigation extends the same restrained motion language with a moving active-section block, a reading-progress rule, compact-on-scroll behavior and a short stagger when the mobile menu opens. The wordmark reacts subtly on hover. All effects use the PRD palette and collapse to near-instant changes when reduced motion is requested.

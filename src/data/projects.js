@@ -23,7 +23,7 @@ export const projects = [
     number: "02",
     title: "AI VISION",
     category: "AI / Computer Vision",
-    filters: ["AI"],
+    filters: ["AI", "R&D"],
     featured: true,
     description:
       "A leaf image classifier for testing TensorFlow Lite predictions before deployment to IoT devices and ESP32-CAM.",
@@ -51,7 +51,7 @@ export const projects = [
     number: "04",
     title: "GWS",
     category: "Web / Environmental Technology",
-    filters: ["WEB", "IOT"],
+    filters: ["WEB", "IOT", "R&D"],
     description:
       "Garuda Water Sanitation: water quality analysis and monitoring, with a broader focus on sanitation reporting.",
     tech: ["JavaScript", "Chart.js", "MQTT"],
@@ -63,7 +63,7 @@ export const projects = [
     number: "05",
     title: "AIR.CEK",
     category: "AI / Water Quality",
-    filters: ["WEB", "AI"],
+    filters: ["WEB", "AI", "R&D"],
     description:
       "An AI-logic web application that analyses water parameters and provides water quality recommendations.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -77,7 +77,7 @@ export const projects = [
     number: "06",
     title: "SOFIA",
     category: "IoT / Monitoring",
-    filters: ["IOT", "WEB"],
+    filters: ["IOT", "WEB", "R&D"],
     description:
       "Smart Office and Facility Intelligence Assistant. An IoT system for monitoring environmental conditions, security and facilities.",
     tech: ["JavaScript", "MQTT", "Chart.js"],
@@ -92,7 +92,7 @@ export const projects = [
     number: "07",
     title: "SIGETA",
     category: "IoT / AI",
-    filters: ["IOT", "AI"],
+    filters: ["IOT", "AI", "R&D"],
     description:
       "IoT monitoring and AI analysis of gas conditions and the effectiveness of tawas. Related repositories are presented as one project.",
     tech: ["ESP32", "MQTT", "Python", "Flask"],
@@ -106,7 +106,7 @@ export const projects = [
     number: "08",
     title: "KasirKita",
     category: "Web / Point of Sale",
-    filters: ["WEB"],
+    filters: ["WEB", "R&D"],
     description:
       "A cashier management web application with separate admin and user interfaces for point-of-sale operations.",
     tech: ["HTML", "CSS", "JavaScript", "Supabase"],
@@ -118,7 +118,7 @@ export const projects = [
     number: "09",
     title: "SuperClean",
     category: "Client Website / UMKM",
-    filters: ["WEB"],
+    filters: ["WEB", "R&D"],
     description:
       "A service website for a home and sofa cleaning business, bringing its services, work and contact information together.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -132,7 +132,7 @@ export const projects = [
     number: "10",
     title: "Golden Bolu",
     category: "UMKM / Web Development",
-    filters: ["WEB"],
+    filters: ["WEB", "R&D"],
     description:
       "A website for a local cake business, with a product catalogue and a direct way for customers to get in touch.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -173,7 +173,7 @@ export const projects = [
     number: "13",
     title: "Toko Novi",
     category: "UMKM / E-commerce",
-    filters: ["WEB"],
+    filters: ["WEB", "R&D"],
     description:
       "A web project supporting a family-owned small business, with product and sales management. The public site provides an account sign-in interface.",
     tech: ["HTML", "CSS", "JavaScript"],
@@ -187,7 +187,7 @@ export const projects = [
     number: "14",
     title: "HealReminder AI",
     category: "Web / Personal Tools",
-    filters: ["WEB"],
+    filters: ["WEB", "R&D"],
     description:
       "A personal health-routine application for tracking hydration, sleep and medication schedules, with browser storage and reminder features.",
     tech: ["JavaScript", "Local Storage", "Chart.js"],

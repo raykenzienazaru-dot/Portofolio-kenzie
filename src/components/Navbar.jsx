@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { m, useScroll } from "framer-motion";
 import { navigation } from "../data/profile";
 import SocialLinks from "./SocialLinks";
 
@@ -9,6 +10,7 @@ export default function Navbar() {
   const [active, setActive] = useState("home");
   const toggleRef = useRef(null);
   const headerRef = useRef(null);
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     const onScroll = () => setCompact(window.scrollY > 32);
@@ -63,6 +65,11 @@ export default function Navbar() {
       ref={headerRef}
       className={`site-header ${compact ? "compact" : ""}`}
     >
+      <m.span
+        className="nav-progress"
+        style={{ scaleX: scrollYProgress }}
+        aria-hidden="true"
+      />
       <div className="container nav-inner">
         <a
           className="wordmark"
@@ -77,7 +84,7 @@ export default function Navbar() {
           aria-label="Main navigation"
           className={`main-nav ${open ? "is-open" : ""}`}
         >
-          {navigation.map((name) => (
+          {navigation.map((name, index) => (
             <a
               href={`#${name.toLowerCase()}`}
               key={name}
@@ -85,8 +92,17 @@ export default function Navbar() {
                 active === name.toLowerCase() ? "location" : undefined
               }
               onClick={() => setOpen(false)}
+              style={{ "--nav-index": index }}
             >
-              {name}
+              <span className="nav-label">{name}</span>
+              {active === name.toLowerCase() && (
+                <m.span
+                  className="nav-active-indicator"
+                  layoutId="main-navigation-indicator"
+                  transition={{ duration: 0.32, ease: "easeOut" }}
+                  aria-hidden="true"
+                />
+              )}
             </a>
           ))}
         </nav>

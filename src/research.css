@@ -161,6 +161,32 @@
   font-size: 11px;
   gap: 8px;
 }
+.rnd-throughline {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  margin: -30px 0 62px;
+  padding: 24px 28px;
+  color: var(--color-floral);
+  background: var(--color-smoky);
+  border-left: 5px solid var(--color-olive);
+}
+.rnd-throughline > svg {
+  color: var(--color-bone);
+}
+.rnd-throughline .eyebrow {
+  display: block;
+  margin-bottom: 9px;
+  color: var(--color-bone);
+  font-size: 8px;
+}
+.rnd-throughline p {
+  max-width: 780px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.85;
+}
 .collection-heading {
   display: flex;
   justify-content: space-between;
@@ -689,6 +715,14 @@
   }
   .unj-actions .text-link {
     font-size: 10px;
+  }
+  .rnd-throughline {
+    gap: 16px;
+    margin: -18px 0 44px;
+    padding: 20px;
+  }
+  .rnd-throughline p {
+    font-size: 11px;
   }
   .collection-heading {
     align-items: flex-start;
