@@ -31,6 +31,8 @@ Scores are local laboratory measurements, not measurements of the public product
 
 ## Publishing status
 
-`vercel.json` and README deployment instructions are ready. This report verifies the local production build; the PRD delivery item requiring verification of the final hosted deployment remains pending until the published version is checked. The existing public URL used in SEO metadata is sourced from repository metadata and does not imply this new design is live. A Git push may trigger deployment when the repository is connected to Vercel.
+Published after pushing implementation commit `5143945` to `origin/main`. The public site at [portofolio-kenzie-pearl.vercel.app](https://portofolio-kenzie-pearl.vercel.app/) returned HTTP 200 with the exact locally built JavaScript bundle. The public UNJ proposal returned HTTP 200 with `application/pdf`.
+
+The complete browser verification script also passed against this public host at 1440 and 390 px: navigation, project/archive filters, search, PDF viewer, all nine PDF responses, image loading, structured data and axe accessibility checks, with no recorded browser errors. This completes the hosted-deployment verification item. The five-width local checks and mobile Lighthouse results above remain separately identified as local measurements.
 
 Do not fill the remaining unknown award years or add live demos for IOTERA, GWS or KasirKita without new source evidence.

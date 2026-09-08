@@ -74,7 +74,7 @@ npm run test:e2e
 
 The test visits desktop, tablet and mobile sizes (1440, 1024, 768, 390 and 320 pixels), navigates all sections, checks mobile keyboard controls, exercises project/archive filters and search, opens and closes the PDF viewer with focus restoration, verifies all nine PDF responses, checks image loading and external-link attributes, validates Person schema and runs axe WCAG A/AA checks. Screenshots and results are saved to the ignored `.work/verification/` directory.
 
-Override `TEST_URL` to test a production preview and `TEST_WIDTHS` with comma-separated widths for focused verification. See [acceptance status](docs/ACCEPTANCE.md) for the recorded result and remaining publishing check.
+Override `TEST_URL` to test a production preview or public host and `TEST_WIDTHS` with comma-separated widths for focused verification. See [acceptance status](docs/ACCEPTANCE.md) for the recorded local and hosted results.
 
 ## Deployment
 
