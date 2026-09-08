@@ -29,7 +29,7 @@ try {
     await expect(page.getByRole("heading", { level: 1 })).toContainText(
       "RAYKENZIE",
     );
-    await expect(page.locator(".project-card")).toHaveCount(10);
+    await expect(page.locator(".project-card")).toHaveCount(6);
     await expect(page.locator(".achievement-item")).toHaveCount(6);
     const overflow = await page.evaluate(() => ({
       viewport: innerWidth,
@@ -81,9 +81,19 @@ try {
       await expect(page.getByRole("navigation")).toBeHidden();
     }
 
-    const expected = { WEB: 6, IoT: 4, AI: 4, "R&D": 2, ALL: 10 };
+    const expected = { WEB: 8, IoT: 6, AI: 6, "R&D": 4, ALL: 14 };
     for (const [filter, count] of Object.entries(expected)) {
       await page.getByRole("button", { name: filter, exact: true }).click();
+      await expect(page.locator(".project-card")).toHaveCount(
+        Math.min(6, count),
+      );
+      if (count > 6)
+        await page
+          .getByRole("button", {
+            name: `View all ${count} projects`,
+            exact: true,
+          })
+          .click();
       await expect(page.locator(".project-card")).toHaveCount(count);
       await expect(
         page.getByRole("button", { name: filter, exact: true }),
@@ -100,6 +110,79 @@ try {
     }
     await page.locator("#projects").scrollIntoViewIfNeeded();
     await page.screenshot({ path: `.work/verification/projects-${width}.png` });
+    const archive = page.locator("#research");
+    await expect(archive.locator(".research-card")).toHaveCount(6);
+    await archive
+      .getByRole("button", { name: "Explore all 17 resources" })
+      .click();
+    await expect(archive.locator(".research-card")).toHaveCount(17);
+    const archiveCounts = {
+      KTI: 7,
+      Proposals: 2,
+      Datasets: 4,
+      Models: 3,
+      Firmware: 1,
+    };
+    for (const [name, count] of Object.entries(archiveCounts)) {
+      await archive
+        .getByRole("group", { name: "Filter research archive" })
+        .getByRole("button", { name, exact: true })
+        .click();
+      if (count > 6)
+        await archive
+          .getByRole("button", { name: `Explore all ${count} resources` })
+          .click();
+      await expect(archive.locator(".research-card")).toHaveCount(count);
+    }
+    await archive.getByRole("button", { name: "All", exact: true }).click();
+    const search = archive.getByRole("searchbox", {
+      name: "Search research archive",
+    });
+    await search.fill("tawas");
+    await expect(archive.locator(".research-card")).toHaveCount(1);
+    await expect(archive.locator(".research-card h3")).toHaveText("SIGETA");
+    await search.fill("zznomatchingresource");
+    await expect(
+      archive.getByRole("heading", { name: "No matching resources" }),
+    ).toBeVisible();
+    await archive.getByRole("button", { name: "Reset search" }).click();
+    await expect(search).toHaveValue("");
+    const previewButton = archive.getByRole("button", {
+      name: "Preview EduInsight AI",
+      exact: true,
+    });
+    await previewButton.click();
+    const dialog = page.getByRole("dialog", { name: "EduInsight AI" });
+    await expect(dialog).toBeVisible();
+    await expect(dialog.locator("iframe")).toHaveAttribute(
+      "src",
+      "/documents/eduinsight.pdf#view=FitH",
+    );
+    await expect(
+      dialog.getByRole("link", { name: "Download PDF" }),
+    ).toHaveAttribute("download", "");
+    await dialog
+      .getByRole("button", { name: "Close document preview" })
+      .focus();
+    await page.keyboard.press("Escape");
+    await expect(dialog).toHaveCount(0);
+    await expect(previewButton).toBeFocused();
+    await expect(page.locator(".unj-copy")).toContainText(
+      "Research & Development (R&D)",
+    );
+    if (width === 1440) {
+      const { documents } = await import("../src/data/research.js");
+      for (const document of documents) {
+        const response = await page.request.get(`${url}${document.file}`);
+        expect(response.status()).toBe(200);
+        expect(response.headers()["content-type"]).toContain("application/pdf");
+        const bytes = await response.body();
+        expect(bytes.subarray(0, 5).toString()).toBe("%PDF-");
+        expect(bytes.length).toBe(document.bytes);
+      }
+    }
+    await archive.scrollIntoViewIfNeeded();
+    await page.screenshot({ path: `.work/verification/research-${width}.png` });
     const links = await page
       .locator('a[href^="https://"]')
       .evaluateAll((els) =>
@@ -154,6 +237,8 @@ try {
       navigation: "passed",
       filters: "passed",
       images: "passed",
+      researchArchive: "passed",
+      pdfPreview: "passed",
       accessibility: "passed",
       errors,
     };

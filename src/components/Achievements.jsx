@@ -28,6 +28,25 @@ export default function Achievements() {
             />
           ))}
         </ol>
+        <div className="learning-note">
+          <div>
+            <span className="eyebrow">Continuing to learn</span>
+            <h3>AI Ready ASEAN</h3>
+          </div>
+          <p>
+            ASEAN Foundation
+            <br />
+            July 2026
+          </p>
+          <a
+            className="text-link"
+            href="https://www.linkedin.com/in/raykenzie-nazaru-fathurrahmansyah-774548387"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on LinkedIn ↗
+          </a>
+        </div>
       </div>
     </section>
   );

@@ -1,15 +1,28 @@
 import { useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Plus, Library } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 import ProjectCard from "./ProjectCard";
+import ResearchSpotlight from "./ResearchSpotlight";
+import FilterBar from "./ui/FilterBar";
+import Reveal from "./ui/Reveal";
 import { projects, collaboration } from "../data/projects";
 const filters = ["ALL", "WEB", "IOT", "AI", "R&D"];
+
 export default function Projects() {
   const [filter, setFilter] = useState("ALL");
-  const visible = projects.filter(
+  const [expanded, setExpanded] = useState(false);
+  const filtered = projects.filter(
     (project) => filter === "ALL" || project.filters.includes(filter),
   );
+  const visible = expanded ? filtered : filtered.slice(0, 6);
   const showCollaboration = filter === "ALL" || filter === "R&D";
+  const options = filters.map((value) => ({
+    value,
+    label: value === "IOT" ? "IoT" : value,
+    count: projects.filter(
+      (project) => value === "ALL" || project.filters.includes(value),
+    ).length,
+  }));
   return (
     <section id="projects" className="section projects-section">
       <div className="container">
@@ -20,44 +33,51 @@ export default function Projects() {
             PROJECTS<span className="heading-dot">.</span>
           </SectionHeading>
           <p>
-            A selection of systems, experiments
-            <br />
-            and products I've worked on.
+            Software, connected devices and research.
+            <br />A closer look at the work behind them.
           </p>
         </div>
+        <ResearchSpotlight />
+        <div className="collection-heading">
+          <h3 className="eyebrow">Explore the project index</h3>
+          <a href="#research">
+            <Library size={15} /> Research archive <ArrowUpRight size={15} />
+          </a>
+        </div>
         <div className="project-toolbar">
-          <div
-            className="project-filters"
-            role="group"
-            aria-label="Filter projects"
-          >
-            {filters.map((item) => (
-              <button
-                key={item}
-                aria-pressed={filter === item}
-                onClick={() => setFilter(item)}
-              >
-                {item === "IOT" ? "IoT" : item}
-                {filter === item && (
-                  <span className="filter-dot" aria-hidden="true" />
-                )}
-              </button>
-            ))}
-          </div>
+          <FilterBar
+            options={options}
+            value={filter}
+            onChange={(value) => {
+              setFilter(value);
+              setExpanded(false);
+            }}
+            label="Filter projects"
+          />
           <span
             className="eyebrow project-count"
             role="status"
             aria-live="polite"
           >
-            {String(visible.length).padStart(2, "0")} projects
+            {String(filtered.length).padStart(2, "0")} projects
             {showCollaboration ? " + collaboration" : ""}
           </span>
         </div>
         <div className="projects-grid">
           {visible.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <Reveal key={project.id} className="project-reveal">
+              <ProjectCard project={project} />
+            </Reveal>
           ))}
         </div>
+        {!expanded && filtered.length > visible.length && (
+          <button
+            className="collection-expand"
+            onClick={() => setExpanded(true)}
+          >
+            View all {filtered.length} projects <Plus size={18} />
+          </button>
+        )}
         {showCollaboration && (
           <article className="collaboration-feature" data-project="waru">
             <div>

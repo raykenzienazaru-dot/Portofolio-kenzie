@@ -141,6 +141,61 @@ export const projects = [
     image: "/images/projects/bolu.webp",
     imageAlt: "Golden Bolu bakery website displaying its cake collection",
   },
+  {
+    id: "grenvis",
+    number: "11",
+    title: "GRENVIS",
+    category: "IoT / Robotics",
+    filters: ["IOT", "AI", "R&D"],
+    description:
+      "A plant-monitoring prototype with an ESP32, MQTT and a web dashboard. The repository documents working monitoring features alongside simulated vision input and integrations still in development.",
+    tech: ["ESP32", "Node.js", "MQTT", "ESP-NOW"],
+    repo: owned("AI-dasboard"),
+    previewLabel: "PROTOTYPE / SOURCE OVERVIEW",
+  },
+  {
+    id: "ai-sensor",
+    number: "12",
+    title: "AI Sensor Monitoring",
+    category: "AI / Sensor Research",
+    filters: ["AI", "IOT", "R&D"],
+    description:
+      "Experiments turning temperature, air humidity and soil moisture into lightweight TensorFlow Lite models. Training uses literature-informed synthetic data, rather than field observations.",
+    tech: ["TensorFlow Lite", "Keras", "INT8"],
+    repo: owned("datasetminotoring"),
+    image: "/images/projects/ai-sensor.webp",
+    imageAlt:
+      "Confusion matrix from the sensor model repository, evaluated on synthetic data",
+    imageLabel: "Repository figure · Synthetic-data evaluation",
+  },
+  {
+    id: "tokonovi",
+    number: "13",
+    title: "Toko Novi",
+    category: "UMKM / E-commerce",
+    filters: ["WEB"],
+    description:
+      "A web project supporting a family-owned small business, with product and sales management. The public site provides an account sign-in interface.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    repo: owned("TokoNovi"),
+    demo: "https://tokonovi.vercel.app/",
+    image: "/images/projects/tokonovi.webp",
+    imageAlt: "Toko Novi deployed account sign-in interface",
+  },
+  {
+    id: "healreminder",
+    number: "14",
+    title: "HealReminder AI",
+    category: "Web / Personal Tools",
+    filters: ["WEB"],
+    description:
+      "A personal health-routine application for tracking hydration, sleep and medication schedules, with browser storage and reminder features.",
+    tech: ["JavaScript", "Local Storage", "Chart.js"],
+    repo: owned("Kesehatan"),
+    demo: "https://healreminder.pages.dev/",
+    image: "/images/projects/healreminder.webp",
+    imageAlt: "HealReminder deployed health-routine tracking interface",
+  },
 ];
 
 export const collaboration = {

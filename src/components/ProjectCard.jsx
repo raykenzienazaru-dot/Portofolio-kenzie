@@ -55,6 +55,9 @@ export default function ProjectCard({ project }) {
           <ArrowUpRight size={22} />
         </span>
       </a>
+      {project.imageLabel && (
+        <p className="image-source-label">{project.imageLabel}</p>
+      )}
       <div className="project-meta eyebrow">
         <span>
           {project.number} / {project.category}

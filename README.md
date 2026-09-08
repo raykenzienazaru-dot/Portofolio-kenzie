@@ -1,6 +1,6 @@
 # Raykenzie Portfolio 2026
 
-An editorial portfolio for Raykenzie Nazaru Fathurrahmansyah, built with React, Vite and Tailwind CSS. Includes ten selected projects, a clearly attributed WARU collaboration, six achievements, skills, a technical journey and contact links.
+An editorial portfolio for Raykenzie Nazaru Fathurrahmansyah, built with React, Vite and Tailwind CSS. Includes fourteen projects, a clearly attributed WARU collaboration, an EduInsight AI / UNJ UI/UX spotlight, six achievements and seventeen research resources: nine original PDFs plus eight dataset, model and firmware links.
 
 ## Source of truth
 
@@ -33,12 +33,14 @@ The production site is generated in `dist/`. No backend, accounts, API credentia
 ```text
 src/
   components/       Navigation, sections and reusable display components
-  data/             Profile, projects, achievements and skills
+  data/             Profile, projects, achievements, skills and research resources
   App.jsx           Page composition
   main.jsx          React entry and self-hosted font imports
   styles.css        Tailwind theme and responsive editorial styles
+  research.css      Research archive, document viewer and refined interactions
 public/
   images/           Optimized portrait and real project screenshots
+  documents/        Nine original KTI, proposal and presentation PDFs
   favicon.svg       RZN favicon
   og-image.png      Social sharing image
   robots.txt
@@ -49,16 +51,17 @@ scripts/
 docs/               PRD, source notes and acceptance checklist
 ```
 
-The original `images/`, `files/`, `.md` and `Foto.jpeg` remain available as source material. Only optimized assets in `public/` are included in the production build. The old standalone CSS/JavaScript application has been replaced.
+The original `images/`, `files/`, `.md`, `Foto.jpeg` and UNJ proposal remain available as source material. Production assets live in `public/`. PDF files are requested when opened or downloaded; only their small cover thumbnails load in the archive. The old standalone CSS/JavaScript application has been replaced.
 
 ## Editing content
 
 - Update `src/data/projects.js` for project descriptions, technology tags, screenshots and verified links. An absent image produces an explicitly labeled repository preview, including if an image fails to load.
 - Update `src/data/achievements.js` only with verified placements and years.
+- Update `src/data/research.js` for document metadata and repository resources. Keep original PDF page counts and sizes accurate; distinguish synthetic data, model artifacts and header-only templates.
 - Update `src/data/profile.js` for portrait and contact details. Social icons include accessible labels and safe external-link attributes.
 - Add optimized WebP thumbnails to `public/images/projects/`; do not fabricate application screenshots.
 - Fonts are locally bundled Bebas Neue and Inter. The core palette is exactly Smoky Black `#11120D`, Olive Drab `#565449`, Bone `#D8CFBC`, Floral White `#FFFBF4`. Real project screenshots retain their original colors.
-- Motion is limited to small CSS transitions and smooth scrolling, with a reduced-motion override. Framer Motion is unnecessary for these transitions.
+- Framer Motion supplies subtle collection reveals and a sliding filter underline. Both honor reduced-motion preferences. [Design references](docs/DESIGN_REFERENCES.md) document the 21st.dev interaction references and independent implementation.
 
 ## Verification
 
@@ -69,7 +72,7 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-The test visits desktop, tablet and mobile sizes (1440, 1024, 768, 390 and 320 pixels), navigates all sections, checks mobile keyboard controls, exercises every filter, checks image loading and external-link attributes, validates Person schema and runs axe WCAG A/AA checks. Screenshots and results are saved to the ignored `.work/verification/` directory.
+The test visits desktop, tablet and mobile sizes (1440, 1024, 768, 390 and 320 pixels), navigates all sections, checks mobile keyboard controls, exercises project/archive filters and search, opens and closes the PDF viewer with focus restoration, verifies all nine PDF responses, checks image loading and external-link attributes, validates Person schema and runs axe WCAG A/AA checks. Screenshots and results are saved to the ignored `.work/verification/` directory.
 
 Override `TEST_URL` to test a production preview and `TEST_WIDTHS` with comma-separated widths for focused verification. See [acceptance status](docs/ACCEPTANCE.md) for the recorded result and remaining publishing check.
 

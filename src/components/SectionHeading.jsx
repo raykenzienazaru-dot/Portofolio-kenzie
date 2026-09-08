@@ -3,6 +3,7 @@ export default function SectionHeading({
   label,
   children,
   className = "",
+  id,
 }) {
   return (
     <div className={`section-heading ${className}`}>
@@ -10,7 +11,7 @@ export default function SectionHeading({
         <span>{number}</span>
         <span>{label}</span>
       </div>
-      <h2>{children}</h2>
+      <h2 id={id}>{children}</h2>
     </div>
   );
 }

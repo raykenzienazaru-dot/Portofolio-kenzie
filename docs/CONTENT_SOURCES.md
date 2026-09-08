@@ -38,3 +38,53 @@ IOTERA's README names a team including Raykenzie. It is described as a team rese
 Seven project screenshots were captured from real deployed frontends at a 1440 × 1000 desktop viewport and encoded as WebP. These verify the interface's availability when inspected, not the complete behavior of externally hosted models, sensor connections, authentication or databases. Original screenshot contents are not asserted as portfolio metrics.
 
 Unknown project dates, unknown award years, unavailable deployments and unspecified client/experience metrics are omitted. The site does not fetch GitHub at runtime and makes no invented availability, customer-satisfaction or professional-experience claims.
+
+## Owner-requested research expansion — 8 September 2026
+
+The owner subsequently requested inclusion of KTI PDFs, the UNJ UI/UX competition with their R&D role, additional GitHub sensor resources and UI refinement informed by 21st.dev. These additions supplement the PRD's original ten projects; they do not change its palette or ownership rules.
+
+### EduInsight AI / INACOMP 2.0
+
+Primary source: the owner-provided [`PROPOSAL LOMBA UI UNJ FINAL.pdf`](../PROPOSAL%20LOMBA%20UI%20UNJ%20FINAL.pdf), 46 pages, cover year 2026 and preface dated 22 June 2026. The cover lists team NAVI, including Raykenzie. The proposal identifies UI/UX Design Competition INACOMP 2.0, Universitas Negeri Jakarta. The owner explicitly confirmed **Research & Development (R&D)** in this conversation. No placement, award, sole ownership or deployed application is claimed.
+
+The description summarizes the proposal's learning concept: gamification/quizzes, AI chatbot/flashcards, class administration and teacher analytics. The spotlight's student mockup is extracted from PDF page 21. The Figma prototype URL is taken from the PDF link annotations, with the temporary sharing token omitted. It is a source-linked prototype, not an independently verified live application.
+
+### Original PDF library
+
+Production copies in `public/documents/` preserve the supplied bytes. Cover thumbnails are rendered from those documents; metadata comes from their actual covers and page counts. Years identify the document, not a competition result.
+
+| Document                | Original source                | Pages | Year / attribution                                 |
+| ----------------------- | ------------------------------ | ----- | -------------------------------------------------- |
+| EduInsight AI           | Root UNJ proposal above        | 46    | 2026; R&D, team NAVI                               |
+| SOFIA — Organic Farming | `files/` farming SOFIA paper   | 43    | 2026; Raykenzie named as author                    |
+| Garuda Water Sanitation | `files/` GWS paper             | 51    | 2026; contributing author                          |
+| AIR.CEK                 | `files/AIR.CEK.pdf`            | 29    | 2026; contributing author                          |
+| SIGETA                  | `files/` SIGETA paper          | 41    | 2025; contributing author                          |
+| SIGEMA                  | `files/` SIGEMA paper          | 21    | 2025; writer, team research                        |
+| LUMINA                  | `files/` LUMINA proposal       | 20    | 2025; team SATORU, contributing author             |
+| SOFIA — Smart Office    | `files/` office SOFIA paper    | 20    | 2026; group 6 includes Raykenzie on page 2         |
+| BALAP-SA                | `files/` BALAP-SA presentation | 11    | Scanned cover inspected visually; year unavailable |
+
+Organic Farming SOFIA and Smart Office SOFIA are separately named papers. They are not presented as the same application. BALAP-SA is described as a presentation, not a peer-reviewed publication.
+
+### Additional projects and research assets
+
+- [AI-dasboard](https://github.com/raykenzienazaru-dot/AI-dasboard): README identifies GRENVIS Smart Plant Monitoring System. Dashboard, MQTT, ESP32 and ESP-NOW firmware are present. README explicitly records simulated vision input and unfinished hardware/production integrations; the portfolio describes a prototype.
+- [datasetminotoring](https://github.com/raykenzienazaru-dot/datasetminotoring): README describes literature-informed synthetic temperature, humidity and soil-moisture data and experimental environmental-risk classification. It is not field data or a validated plant-disease diagnostic system. The repository confusion matrix is labeled as a synthetic-data evaluation image.
+- Dataset archive paths verified in that repository: `dataset/home.zip`, `dataset_disease/archive (3).zip`, `dataset_disease1/DATASET_SENSOR.zip`. Archive contents, image counts and provenance beyond the README are not inferred from filenames.
+- Model paths verified: `models/modelsensorminotoring.tflite`, `.h`, `grenvis_sensor_model.keras`, `.tflite`, `.h` and other model artifacts. INT8 sensor description follows the README; no accuracy statistic is added to the portfolio.
+- [AI VISION model folder](https://github.com/raykenzienazaru-dot/AI_VISION/tree/main/models): Keras/TFLite leaf-classification artifacts, with Healthy, Powdery and Rust outputs.
+- [SIGETA CSV](https://github.com/raykenzienazaru-dot/sigeta-ai/blob/main/sensor_data.csv): the raw file contains only `timestamp,mq,temperature,humidity,status`. It is explicitly labeled a header-only schema with no observation rows.
+- [GRENVIS firmware](https://github.com/raykenzienazaru-dot/AI-dasboard/tree/main/firmware): sensor firmware plus simulated vision-data sender; unfinished integrations remain visible in the description.
+- [TokoNovi](https://github.com/raykenzienazaru-dot/TokoNovi): source redirects to its account interface. [Deployment](https://tokonovi.vercel.app/) returned HTTP 200 and a matching account screen; screenshot captured from it. Family-business context is supported by the owner's public portfolio/profile.
+- [Kesehatan / HealReminder AI](https://github.com/raykenzienazaru-dot/Kesehatan): source contains reminder, browser storage and Chart.js features. [Deployment](https://healreminder.pages.dev/) returned HTTP 200 and the matching dashboard; screenshot captured from it. No medical effectiveness claim is made.
+
+The `PNJ` README describes FABRIX AI, so it was not counted again. Other inspected repositories without sufficient distinct evidence were not turned into invented project cards.
+
+### Public profiles and access limits
+
+The indexed public [LinkedIn profile](https://id.linkedin.com/in/raykenzie-nazaru-fathurrahmansyah-774548387) corroborates the UNJ participation and lists AI Ready ASEAN, ASEAN Foundation, July 2026. The latter appears as a learning credential, separate from the six competition placements. Direct LinkedIn access was rate-limited; only accessible indexed content was used.
+
+[Instagram](https://www.instagram.com/zienaru_/) could not be reliably read because access was throttled. The verified PRD profile link remains available, but no new project, award or date was inferred from inaccessible posts.
+
+See [design references](DESIGN_REFERENCES.md) for the specific 21st.dev patterns and how they were independently implemented.

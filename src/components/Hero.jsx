@@ -45,6 +45,9 @@ export default function Hero() {
               About Me <ArrowRight size={18} />
             </a>
           </div>
+          <a className="hero-archive-link" href="#research">
+            Explore KTI, proposals & datasets <ArrowUpRight size={15} />
+          </a>
         </div>
         <figure className="hero-portrait">
           <div className="portrait-frame">

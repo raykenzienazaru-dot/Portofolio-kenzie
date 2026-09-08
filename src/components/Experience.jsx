@@ -2,6 +2,12 @@ import SectionHeading from "./SectionHeading";
 const journey = [
   {
     time: "2026",
+    title: "EduInsight AI · INACOMP 2.0",
+    role: "UI/UX · Research & Development (R&D)",
+    text: "A team NAVI learning-platform proposal for the UI/UX Design Competition at Universitas Negeri Jakarta. Research-led design connecting student needs, gamified learning and teacher analytics.",
+  },
+  {
+    time: "2026",
     title: "GRENVIS",
     role: "Research, Robotics, AI & IoT",
     text: "Developing Green Vision Intelligent System, combining robotics and sensing with computer vision. First place in Robotics at GLITER JAK, DKI Jakarta.",
