@@ -1,0 +1,153 @@
+// Content provenance and verification notes: docs/CONTENT_SOURCES.md.
+const owned = (name) => `https://github.com/raykenzienazaru-dot/${name}`;
+export const projects = [
+  {
+    id: "fabrix",
+    number: "01",
+    title: "FABRIX AI",
+    category: "AI / Computer Vision",
+    filters: ["AI", "R&D"],
+    featured: true,
+    description:
+      "A fabric inspection platform combining visual defect detection, quality analysis and cutting guidance for textile businesses.",
+    role: "Research & Development Assistant · Team SATORU",
+    tech: ["Next.js", "Python", "YOLO", "Supabase"],
+    repo: owned("FABRIX-AI"),
+    demo: "https://fabrixai.vercel.app/",
+    image: "/images/projects/fabrix.webp",
+    imageAlt:
+      "FABRIX AI deployed website showing its fabric inspection platform",
+  },
+  {
+    id: "ai-vision",
+    number: "02",
+    title: "AI VISION",
+    category: "AI / Computer Vision",
+    filters: ["AI"],
+    featured: true,
+    description:
+      "A leaf image classifier for testing TensorFlow Lite predictions before deployment to IoT devices and ESP32-CAM.",
+    tech: ["React", "Python", "FastAPI", "TensorFlow Lite"],
+    repo: owned("AI_VISION"),
+    demo: "https://ai-vision-tau.vercel.app/",
+    image: "/images/projects/ai-vision.webp",
+    imageAlt: "AI Vision testing interface for plant leaf classification",
+  },
+  {
+    id: "iotera",
+    number: "03",
+    title: "IOTERA",
+    category: "IoT / Research",
+    filters: ["IOT", "R&D"],
+    description:
+      "Research and design documentation for an IoT engineering assistant that translates ideas into component recommendations and interactive 3D prototypes.",
+    role: "Team project · Research & design documentation",
+    tech: [],
+    repo: owned("IOTERA"),
+    previewLabel: "RESEARCH DOCUMENTATION",
+  },
+  {
+    id: "gws",
+    number: "04",
+    title: "GWS",
+    category: "Web / Environmental Technology",
+    filters: ["WEB", "IOT"],
+    description:
+      "Garuda Water Sanitation: water quality analysis and monitoring, with a broader focus on sanitation reporting.",
+    tech: ["JavaScript", "Chart.js", "MQTT"],
+    repo: owned("GWS"),
+    previewLabel: "REPOSITORY OVERVIEW",
+  },
+  {
+    id: "air-cek",
+    number: "05",
+    title: "AIR.CEK",
+    category: "AI / Water Quality",
+    filters: ["WEB", "AI"],
+    description:
+      "An AI-logic web application that analyses water parameters and provides water quality recommendations.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    repo: owned("AIR-AI"),
+    demo: "https://air-ai-xi.vercel.app/",
+    image: "/images/projects/air-cek.webp",
+    imageAlt: "AIR.CEK water quality analysis website",
+  },
+  {
+    id: "sofia",
+    number: "06",
+    title: "SOFIA",
+    category: "IoT / Monitoring",
+    filters: ["IOT", "WEB"],
+    description:
+      "Smart Office and Facility Intelligence Assistant. An IoT system for monitoring environmental conditions, security and facilities.",
+    tech: ["JavaScript", "MQTT", "Chart.js"],
+    repo: owned("SOFIA"),
+    demo: "https://sofia-lime.vercel.app/",
+    image: "/images/projects/sofia.webp",
+    imageAlt:
+      "SOFIA monitoring website for environmental and facility conditions",
+  },
+  {
+    id: "sigeta",
+    number: "07",
+    title: "SIGETA",
+    category: "IoT / AI",
+    filters: ["IOT", "AI"],
+    description:
+      "IoT monitoring and AI analysis of gas conditions and the effectiveness of tawas. Related repositories are presented as one project.",
+    tech: ["ESP32", "MQTT", "Python", "Flask"],
+    repo: owned("SI-GETA"),
+    demo: "https://si-geta.vercel.app/",
+    image: "/images/projects/sigeta.webp",
+    imageAlt: "SIGETA gas and tawas effectiveness monitoring dashboard",
+  },
+  {
+    id: "kasirkita",
+    number: "08",
+    title: "KasirKita",
+    category: "Web / Point of Sale",
+    filters: ["WEB"],
+    description:
+      "A cashier management web application with separate admin and user interfaces for point-of-sale operations.",
+    tech: ["HTML", "CSS", "JavaScript", "Supabase"],
+    repo: owned("kasirkita"),
+    previewLabel: "REPOSITORY OVERVIEW",
+  },
+  {
+    id: "superclean",
+    number: "09",
+    title: "SuperClean",
+    category: "Client Website / UMKM",
+    filters: ["WEB"],
+    description:
+      "A service website for a home and sofa cleaning business, bringing its services, work and contact information together.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    repo: owned("cucicleane"),
+    demo: "https://superclean-fawn.vercel.app/",
+    image: "/images/projects/superclean.webp",
+    imageAlt: "SuperClean website showcasing home and sofa cleaning services",
+  },
+  {
+    id: "bolu",
+    number: "10",
+    title: "Golden Bolu",
+    category: "UMKM / Web Development",
+    filters: ["WEB"],
+    description:
+      "A website for a local cake business, with a product catalogue and a direct way for customers to get in touch.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    repo: owned("bolu"),
+    demo: "https://bolu-ten.vercel.app/",
+    image: "/images/projects/bolu.webp",
+    imageAlt: "Golden Bolu bakery website displaying its cake collection",
+  },
+];
+
+export const collaboration = {
+  title: "WARU",
+  subtitle: "Warung Assistant AI",
+  role: "Research & Development (R&D)",
+  description:
+    "A collaborative platform for culinary MSMEs, supporting digital ordering, operational management and AI-assisted business insights.",
+  repo: "https://github.com/Dacuvis/waru-backend",
+};

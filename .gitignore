@@ -1,2 +1,7 @@
 .vercel
 .antigravitycli/
+node_modules/
+dist/
+.work/
+.env*
+!.env.example
