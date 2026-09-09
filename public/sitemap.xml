@@ -4,40 +4,40 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 >
   <url>
-    <loc>https://portofolio-kenzie-pearl.vercel.app/</loc>
+    <loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/</loc>
     <lastmod>2026-09-09</lastmod>
     <image:image>
-      <image:loc>https://portofolio-kenzie-pearl.vercel.app/images/raykenzie.webp</image:loc>
+      <image:loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/images/raykenzie.webp</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://portofolio-kenzie-pearl.vercel.app/og-image.png</image:loc>
+      <image:loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/og-image.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://portofolio-kenzie-pearl.vercel.app/documents/eduinsight.pdf</loc>
+    <loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/documents/eduinsight.pdf</loc>
   </url>
   <url>
-    <loc>https://portofolio-kenzie-pearl.vercel.app/documents/sofia-farming.pdf</loc>
+    <loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/documents/sofia-farming.pdf</loc>
   </url>
   <url>
-    <loc>https://portofolio-kenzie-pearl.vercel.app/documents/gws.pdf</loc>
+    <loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/documents/gws.pdf</loc>
   </url>
   <url>
-    <loc>https://portofolio-kenzie-pearl.vercel.app/documents/air-cek.pdf</loc>
+    <loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/documents/air-cek.pdf</loc>
   </url>
   <url>
-    <loc>https://portofolio-kenzie-pearl.vercel.app/documents/sigeta.pdf</loc>
+    <loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/documents/sigeta.pdf</loc>
   </url>
   <url>
-    <loc>https://portofolio-kenzie-pearl.vercel.app/documents/sigema.pdf</loc>
+    <loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/documents/sigema.pdf</loc>
   </url>
   <url>
-    <loc>https://portofolio-kenzie-pearl.vercel.app/documents/lumina.pdf</loc>
+    <loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/documents/lumina.pdf</loc>
   </url>
   <url>
-    <loc>https://portofolio-kenzie-pearl.vercel.app/documents/sofia-office.pdf</loc>
+    <loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/documents/sofia-office.pdf</loc>
   </url>
   <url>
-    <loc>https://portofolio-kenzie-pearl.vercel.app/documents/balap-sa.pdf</loc>
+    <loc>https://portofolio-kenzie.raykenzienazaru.workers.dev/documents/balap-sa.pdf</loc>
   </url>
 </urlset>

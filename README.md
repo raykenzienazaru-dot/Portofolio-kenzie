@@ -79,8 +79,8 @@ Override `TEST_URL` to test a production preview or public host and `TEST_WIDTHS
 
 ## Deployment
 
-Vercel configuration is included: framework `vite`, build command `npm run build`, output `dist`. Connect this repository to the intended Vercel project, or deploy `dist/` with another static host. Publish only after reviewing the completed local site.
+The primary site is deployed by Cloudflare Workers Builds from this repository. Build command: `npm run build`; deploy command: `npx wrangler deploy`. `wrangler.jsonc` publishes `dist/` to the existing `portofolio-kenzie` Worker. HTML handling is disabled to serve Google's verification file at its exact `.html` URL; `public/_redirects` internally maps `/` to `/index.html`. Unknown paths return 404. Vercel configuration remains available for the secondary deployment.
 
-Canonical, Open Graph and sitemap URLs use the existing portfolio homepage from GitHub metadata: `https://portofolio-kenzie-pearl.vercel.app/`. If the final domain changes, update `index.html`, `public/robots.txt` and `public/sitemap.xml` together. Regenerate the sharing image with `node scripts/create-og.mjs` after changing its copy.
+Canonical, Open Graph and sitemap URLs use the primary domain confirmed by the owner: `https://portofolio-kenzie.raykenzienazaru.workers.dev/`. If the final domain changes, update `index.html`, `public/robots.txt`, `public/sitemap.xml` and the canonical assertion in `scripts/verify.mjs` together. Regenerate the sharing image with `node scripts/create-og.mjs` after changing its copy.
 
 After publishing, verify the public page, mobile navigation, project filters, image loading, favicon, Open Graph image, robots and sitemap. Local verification does not establish that the redesigned version is live.

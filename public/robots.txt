@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portofolio-kenzie-pearl.vercel.app/sitemap.xml
+Sitemap: https://portofolio-kenzie.raykenzienazaru.workers.dev/sitemap.xml

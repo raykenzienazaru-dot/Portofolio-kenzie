@@ -238,7 +238,7 @@ try {
     );
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       "href",
-      "https://portofolio-kenzie-pearl.vercel.app/",
+      "https://portofolio-kenzie.raykenzienazaru.workers.dev/",
     );
     const accessibility = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
