@@ -22,9 +22,11 @@ An earlier web-search-tool query did not surface this Vercel domain. This was no
 
 Publishing metadata or a sitemap does not guarantee crawling, indexing, a specific result title or ranking. Google must crawl and process updates. The robots.txt sitemap reference already provides a discovery hint without Search Console; submitting it in Search Console adds processing and crawl diagnostics.
 
-To request discovery, add the canonical URL as a property in Google Search Console, complete ownership verification, submit `https://portofolio-kenzie-pearl.vercel.app/sitemap.xml`, then use URL Inspection to request indexing for the homepage. No verification token is committed because Google generates it for the verified property owner.
+To request discovery, add the canonical URL as a property in Google Search Console, complete ownership verification, submit `https://portofolio-kenzie-pearl.vercel.app/sitemap.xml`, then use URL Inspection to request indexing for the homepage.
 
-Use a **URL-prefix** property for the exact HTTPS address above. Choose HTML tag verification and copy the Google-provided `google-site-verification` tag for installation in the homepage head. Once it is deployed, complete verification in Search Console, submit `sitemap.xml` in Sitemaps, then inspect the homepage URL and request indexing. Verification and submission have not been performed in this workspace.
+The owner supplied Google's HTML verification file `google2732408b1cca55cd.html`. An unchanged copy lives in `public/google2732408b1cca55cd.html`, so the static build serves it at `https://portofolio-kenzie-pearl.vercel.app/google2732408b1cca55cd.html`. Use **HTML file** verification for the matching **URL-prefix** property. Keep this file available after verification.
+
+Once the file is deployed, click Verify in Search Console, submit `sitemap.xml` in Sitemaps, then inspect the homepage URL and request indexing. Account-side ownership verification, sitemap submission and index status remain unconfirmed until completed in Search Console. The verification file is not a content page and is intentionally absent from the sitemap.
 
 ## Review against the supplied Google documentation
 
