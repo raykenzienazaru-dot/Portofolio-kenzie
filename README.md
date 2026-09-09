@@ -7,6 +7,7 @@ An editorial portfolio for Raykenzie Nazaru Fathurrahmansyah, built with React, 
 1. [Original PDF PRD](docs/PRD_Portfolio_Raykenzie_Nazaru_Fathurrahmansyah.pdf) takes priority.
 2. [Original detailed brief](.md) supplements the PRD.
 3. [Content sources and accuracy decisions](docs/CONTENT_SOURCES.md) record repository evidence and unavailable information.
+4. [Search visibility notes](docs/SEO.md) record implemented metadata and the remaining Google Search Console step.
 
 Do not invent dates, project roles, proficiency ratings, deployments or metrics. Repository ownership does not imply sole authorship. Unknown achievement years are omitted intentionally.
 

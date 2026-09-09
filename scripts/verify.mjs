@@ -221,8 +221,25 @@ try {
     const schema = JSON.parse(
       await page.locator('script[type="application/ld+json"]').textContent(),
     );
-    expect(schema.name).toBe("Raykenzie Nazaru Fathurrahmansyah");
-    expect(schema["@type"]).toBe("Person");
+    const person = schema["@graph"].find((item) => item["@type"] === "Person");
+    const website = schema["@graph"].find(
+      (item) => item["@type"] === "WebSite",
+    );
+    const profilePage = schema["@graph"].find(
+      (item) => item["@type"] === "ProfilePage",
+    );
+    expect(person.name).toBe("Raykenzie Nazaru Fathurrahmansyah");
+    expect(person.knowsAbout).toContain("Research and Development");
+    expect(website.name).toContain("Raykenzie Nazaru Fathurrahmansyah");
+    expect(profilePage.mainEntity["@id"]).toBe(person["@id"]);
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+      "content",
+      /index, follow/,
+    );
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+      "href",
+      "https://portofolio-kenzie-pearl.vercel.app/",
+    );
     const accessibility = await new AxeBuilder({ page })
       .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
       .analyze();
